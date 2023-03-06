@@ -13,7 +13,3 @@ function triplesOfLatinLetters(n) {
 
 triplesOfLatinLetters();
 
-word="abcd"
-var u=word[0].toUpperCase()
-
-console.log(word[1].toUpperCase());
