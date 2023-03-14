@@ -12,6 +12,7 @@ function magicMatrices(matrix) {
 
     if (sumROne !== sumRTwo || sumCOne !== sumCTwo) {
       console.log(false);
+      return
     }
   }
 
@@ -19,7 +20,7 @@ function magicMatrices(matrix) {
 }
 
 magicMatrices([
-  [4, 5, 6],
+  [4, 1, 6],
   [6, 5, 4],
   [5, 5, 5],
 ]);
