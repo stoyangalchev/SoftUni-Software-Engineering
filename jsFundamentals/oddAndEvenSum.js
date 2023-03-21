@@ -3,6 +3,7 @@ function oddAndEvenSum(number) {
   let odd = 0;
   let even = 0;
 
+    
   for (let el of asString) {
     let curent = Number(el);
     if (curent % 2 == 0) {
