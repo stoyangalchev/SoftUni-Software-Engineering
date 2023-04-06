@@ -1,20 +1,18 @@
-class Vehicle{
-    constructor (type,model,parts,fuel,drive){
-        this.type=type,
-        this.model=model,
-        this.parts=parts,
-        this.fuel=fuel,
-        this.drive=drive
-    }
-
-    
+class Vehicle {
+  constructor(type, model, parts, fuel) {
+    (this.type = type),
+      (this.model = model),
+      (this.parts = parts),
+      (this.fuel = fuel),
+      (this.parts.quality = this.parts.engine * this.parts.power);
+  }
+  drive(lostfuel) {
+    return (this.fuel -= lostfuel);
+  }
 }
 
-
-
-    let parts = { engine: 6, power: 100 };
-    let vehicle = new Vehicle('a', 'b', parts, 200);
-    vehicle.drive(100);
-    console.log(vehicle.fuel);
-    console.log(vehicle.parts.quality);
-    
+let parts = { engine: 6, power: 100 };
+let vehicle = new Vehicle("a", "b", parts, 200);
+vehicle.drive(100);
+console.log(vehicle.fuel);
+console.log(vehicle.parts.quality);
