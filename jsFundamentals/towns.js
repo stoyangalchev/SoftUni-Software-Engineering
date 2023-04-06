@@ -5,10 +5,10 @@ function towns(input) {
     let splitedEL = input[i].split(" | ");
     let town = splitedEL[0];
     let latitude = Number(splitedEL[1]).toFixed(2);
-    let longtitude = Number(splitedEL[2]).toFixed(2);
+    let longitude = Number(splitedEL[2]).toFixed(2);
     object.town = town;
     object.latitude = latitude;
-    object.longtitude = longtitude;
+    object.longitude = longitude;
     console.log(object);
   }
 }
