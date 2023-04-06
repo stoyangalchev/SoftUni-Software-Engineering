@@ -15,8 +15,8 @@ function inventory(arr) {
   });
   for (let hero of sortedByLevel) {
     console.log(`Hero: ${hero.name}`);
-    console.log(`Level => ${hero.level}`);
-    console.log(`Item => ${hero.item}`);
+    console.log(`level => ${hero.level}`);
+    console.log(`items => ${hero.item}`);
   }
 }
 inventory([
