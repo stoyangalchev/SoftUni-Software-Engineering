@@ -1,4 +1,5 @@
 function oddOccurrences(str) {
+
   let result = new Map();
   let word = str.toLowerCase().split(" ");
 
