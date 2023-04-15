@@ -8,6 +8,3 @@ function replaceRepeatingChars(input) {
   console.log(arr.join(""));
 }
 replaceRepeatingChars("qqqwerqwecccwd");
-if ("qwerqwecwd"!=="qwerqwecwd"){
-    console.log(true);
-}
