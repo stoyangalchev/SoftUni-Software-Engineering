@@ -8,3 +8,17 @@ function extractFile(input) {
   console.log(`File extension: ${extension}`);
 }
 extractFile("C:\\Internal\\training-internal\\Template.bac.pptx");
+
+
+function solve(input) {
+    let text = input;
+    let start = text.lastIndexOf('\\') + 1;
+    let end = text.lastIndexOf('.');
+    let fileName = text.substring(start, end);
+    let fileExtention = text.substring(end + 1);
+    console.log(fileExtention);
+    console.log(`File name: ${fileName}`);
+    console.log(`File extension: ${fileExtention}`);
+}
+
+solve('C:\\Internal\\training-internal\\Template.pptx');
