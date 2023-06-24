@@ -31,7 +31,6 @@ function deckOfCard(input) {
 
       case "Remove At":
         {
-          //+?
           if (index1 < 0 || index1 >= line.length) {
             console.log("Index out of range");
           } else {
@@ -44,16 +43,13 @@ function deckOfCard(input) {
         {
           if (index1 < 0 || index1 >= line.length) {
             console.log("Index out of range");
-          } else {
-            if (index1 >= 0 || index1 < line.length) {
-              if (line.includes(index2)) {
-                console.log("Card is already added");
-              }
+          } else if (index1 >= 0 && index1 < line.length) {
+            if (line.includes(index2)) {
+              console.log("Card is already added");
+            } else if (!line.includes(index2)) {
+              line.splice(index1, 0, index2);
+              console.log("Card successfully added");
             }
-          }
-          if (!line.includes(index2)) {
-            line.splice(index1, 0, index2);
-            console.log("Card successfully added");
           }
         }
         break;
@@ -63,9 +59,8 @@ function deckOfCard(input) {
   console.log(line.join(", "));
 }
 deckOfCard([
-  "Ace of Diamonds, Queen of Hearts, King of Clubs",
-  "3",
-  "Add, King of Diamonds",
-  "Insert, 2, Jack of Spades",
-  "Remove, Ace of Diamonds",
+  "Jack of Spades, Ace of Clubs, Jack of Clubs",
+  "2",
+  "Insert, -1, Queen of Spades",
+  "Remove At, 1",
 ]);

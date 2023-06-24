@@ -58,3 +58,47 @@ movies([
   "Batman onDate 01.08.2018",
   "Fast and Furious directedBy Rob Cohen",
 ]);
+
+function solve4(input) {
+  let movies = [];
+
+  for (let line of input) {
+    if (line.includes("addMovie")) {
+      let splited = line.split("addMovie ");
+      let name = splited[1];
+
+      movies.push({ name });
+    } else if (line.includes("directedBy")) {
+      let [name, directorta] = line.split(" directedBy ");
+
+      let movie = movies.find((m) => m.name === name);
+
+      if (movie) {
+        movie.director = directorta;
+      }
+    } else if (line.includes("onDate")) {
+      let [name, date] = line.split(" onDate ");
+
+      let movie = movies.find((m) => m.name === name);
+
+      if (movie) {
+        movie.date = date;
+      }
+    }
+  }
+
+  movies.forEach((el) => {
+    if (el.name && el.date && el.director)
+      console.log(JSON.stringify(el));
+  });
+}
+solve4([
+  "addMovie Fast and Furious",
+  "addMovie Godfather",
+  "Inception directedBy Christopher Nolan",
+  "Godfather directedBy Francis Ford Coppola",
+  "Godfather onDate 29.07.2018",
+  "Fast and Furious onDate 30.07.2018",
+  "Batman onDate 01.08.2018",
+  "Fast and Furious directedBy Rob Cohen",
+]);
