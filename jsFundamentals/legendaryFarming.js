@@ -1,54 +1,28 @@
-function legendaryFarming(str = "") {
-  let input = str.toLowerCase().split(" ");
-  let legendary = { fragments: 0, shards: 0, motes: 0 };
-  let junk = {};
-  let hasToBreak = false;
-  while (!hasToBreak && input.length > 0) {
-    let quantity = +input.shift();
-    let material = input.shift();
-    switch (material) {
-      case "shards":
-        legendary[material] += quantity;
-        if (legendary[material] >= 250) {
-          console.log(`Shadowmourne obtained!`);
-          legendary[material] -= 250;
-          hasToBreak = true;
-        }
-        break;
-      case "fragments":
-        legendary[material] += quantity;
-        if (legendary[material] >= 250) {
-          console.log(`Valanyr obtained!`);
-          legendary[material] -= 250;
-          hasToBreak = true;
-        }
-        break;
-      case "motes":
-        legendary[material] += quantity;
-        if (legendary[material] >= 250) {
-          console.log(`Dragonwrath obtained!`);
-          legendary[material] -= 250;
-          hasToBreak = true;
-        }
-        break;
-      default:
-        if (!junk.hasOwnProperty(material)) {
-          junk[material] = 0;
-        }
-        junk[material] += quantity;
-        break;
+function solve(input) {
+  let obj = {};
+
+  for (let el of input) {
+    let splited = el.split(" - ");
+    let garageNumber = splited[0];
+    let dataSplited = splited[1].split(":").join(" -");
+
+    if (!obj.hasOwnProperty(garageNumber)) {
+      obj[garageNumber] = dataSplited;
+    } else {
+      obj[garageNumber] += ". " + dataSplited;
     }
   }
-  let legendItems = Object.entries(legendary)
-    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
-    .forEach((item) => {
-      console.log(`${item[0]}: ${item[1]}`);
-    });
-
-  let junkItems = Object.entries(junk)
-    .sort((a, b) => a[0].localeCompare(b[0]))
-    .forEach((item) => {
-      console.log(`${item[0]}: ${item[1]}`);
-    });
+  for (let [key, value] of Object.entries(obj)) {
+    console.log(`Garage № ${key}`);
+    let valueSplited = value.split(". ");
+    for (let el of valueSplited) {
+      console.log(`--- ${el}`);
+    }
+  }
 }
-legendaryFarming("3 Motes 5 stones 5 Shards 6 leathers 255 fragments 7 Shards");
+solve([
+  "1 - color: dark red, manufacture: WV",
+  "2 - fuel type: diesel",
+  "3 - color: dark blue, fuel type: petrol",
+  "1 - color: green, fuel type: petrol",
+]);

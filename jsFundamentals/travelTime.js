@@ -4,7 +4,7 @@ function solve(input) {
   input.map((x) => {
     let [country, town, price] = x.split(" > ");
 
-    // if (x[country] === undefined) {
+   
     if (!result.hasOwnProperty(country)) {
       // x[country] = {};
       result[country] = {};
@@ -21,7 +21,7 @@ function solve(input) {
 
   let sorted = Object.entries(result).sort((a, b) => a[0].localeCompare(b[0]));
   sorted.forEach(([country, towns]) => {
-    // console.log(`${x[0]} -> ${x[1]} -> ${x[2]}`)
+   
     let finalString = `${country} -> `;
     let sortedTowns = Object.entries(towns).sort((a, b) => a[1] - b[1]);
     sortedTowns.forEach(([town, price]) => {
