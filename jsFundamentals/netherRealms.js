@@ -50,7 +50,7 @@ function neitherRealms(input) {
   }
 }
 
-neitherRealms(["M3ph1st0**,    Azazel"]);
-neitherRealms(["M3ph-0.5s-0.5t0.0**"]);
-neitherRealms(["Gos/ho"]);
+neitherRealms("M3ph1st0**,    Azazel");
+neitherRealms("M3ph-0.5s-0.5t0.0**");
+neitherRealms("Gos/ho");
 neitherRealms("M3ph-0.5s-0.5t0.0**");
