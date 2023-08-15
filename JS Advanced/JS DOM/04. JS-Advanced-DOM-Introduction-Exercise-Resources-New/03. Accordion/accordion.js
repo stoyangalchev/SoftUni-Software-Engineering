@@ -13,5 +13,5 @@ function toggle() {
     buttonElement.textContent = "More";
   }
 
-  console.log(buttonElement.textContent);
+  
 }
