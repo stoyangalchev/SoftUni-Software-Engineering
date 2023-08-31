@@ -1,4 +1,9 @@
 function notify(message) {
-  console.log('todo')
-  // TODO:
+  let hidenTextEl = document.getElementById("notification");
+  hidenTextEl.textContent = message;
+  hidenTextEl.style.display = "block";
+
+  hidenTextEl.addEventListener("click", (e) => {
+    e.target.style.display = "none";
+  });
 }
