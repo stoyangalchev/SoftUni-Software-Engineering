@@ -14,10 +14,9 @@ app.set("views", path.resolve(__dirname, "views"));
 
 app.use(express.static(path.resolve(__dirname, "static")));
 
+app.use(router);
 
-
-mongoose
-  .connect("mongodb://127.0.0.1:27017/petstagram")
+mongoose.connect("mongodb://localhost:27017/petstagram")
   .then(() => {
     console.log("Database is setup and running");
   })
@@ -25,7 +24,7 @@ mongoose
     console.log("Database connection error", err.message);
   });
 
-app.use(router);
+
 app.listen(3000, () => {
   console.log(`Server is listening on port ${3000} http://localhost:${3000}`);
 });
