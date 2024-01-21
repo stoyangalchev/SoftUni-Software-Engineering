@@ -1,0 +1,65 @@
+<main>
+    <div class="profile">
+        <div class="profile-data">
+            <div class="profile_img">
+                <div class="image">
+                    <img src="/static/images/person.png" alt="img8">
+                </div>
+            </div>
+            <div class="personal">
+                <div class="edit">
+                    <!-- User Username -->
+                    <p>{{user.username}}</p>
+                </div>
+                <div class="data">
+
+                    <!-- Total Number of Photos by the User -->
+                    <span>{{creaturesCount}}</span>
+                    <p>photos</p>
+
+                </div>
+                <!-- User Email Address -->
+                <p class="email">{{owner.email}}</p>
+            </div>
+        </div>
+
+        <!-- Start Uploaded Photos Section -->
+        <div class="pet-photos">
+            {{#each creatures}}
+            {{> profile-card}}
+            {{/each}}
+
+            <!--If there are no photo yet!-->
+            {{#unless creatures}}
+            <article class="not-available-photo">
+                <h1>You haven't uploaded photos yet…</h1>
+            </article>
+            {{/unless }}
+
+        </div>
+
+    </div>
+
+</main>
+
+{{!-- <main>
+    <section id="my-posts">
+        <h1>My post</h1>
+
+        <div class="my-container">
+            <!-- If there are own posts in the database display each of them -->
+            {{#if creatures}}
+            {{#each creatures}}
+            {{> profile-card}}
+            {{/each}}
+            {{else}}
+            <!-- If there are still no own posts in the database display: -->
+            <div class="no-posts">
+                <p class="no-offer">There are no own posts yet...</p>
+            </div>
+            {{/if}}
+
+        </div>
+    </section>
+
+</main> --}}
