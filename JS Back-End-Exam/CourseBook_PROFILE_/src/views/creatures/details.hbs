@@ -1,0 +1,149 @@
+
+
+<main>
+    <div class="details-container">
+        <div class="details-container-image">
+            <img src="{{creatures.image}}">
+        </div>
+        <div class="details-container-info">
+            <h2>Title: {{creatures.title}}</h2>
+            <h3>Type: {{creatures.type}}</h3>
+            <h3>Certificate: {{creatures.certificate}}</h3>
+            <h3>Price: €{{creatures.price}}</h3>
+            <h3>By: {{creatures.owner.username}}</h3>
+            <!--If there are sign up users-->
+            {{#if signedArrayOfUsersNames}}
+            <h4>Signed By:
+                {{ signedArrayOfUsersNames }}
+
+
+            </h4>
+            <!--If there are no sign up users-->
+            {{else}}
+            <h4>Nobody has signed in for this course yet</h4>
+            {{/if}}
+        </div>
+        <div class="details-container-content">
+            <p>{{creatures.description}}</p>
+        </div>
+        {{#if isAuthenticated}}
+        <div class="btn-container">
+            <!-- Only for registered user and creator of the course-->
+            {{#if isOwner}}
+            <a href="/creatures/{{creatures._id}}/edit">Edit</a>
+            <a href="/creatures/{{creatures._id}}/delete">Delete</a>
+
+            {{else}}
+            <!-- logged in user who has not yet sign up for the course-->
+            {{#if isSigned}}
+            <!-- logged in user who has already sign up for the course-->
+            <p class="sign-up">You've already signed up for this course!</p>
+            {{else}}
+            <a href="/creatures/{{creatures._id}}/signup">Sign up</a>
+            {{/if}}
+
+            {{/if}}
+        </div>
+        {{/if}}
+    </div>
+</main>
+
+
+{{!-- <main>
+    <div class="container">
+        <div class="col-9">
+
+            <!-- Start Pet Photo Post Section -->
+            <div class="card">
+                <div class="top">
+
+                    <!-- Start User Details and Image Location Section -->
+                    <div class="userDetails">
+
+                        <!-- Link to User Profile Details Page-->
+                        <div>
+                            <div class="profilepic">
+                                <div class="profile_img">
+                                    <div class="image">
+                                        <img src="/static/images/person.png" alt="img8">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3>
+
+                            <!-- Link to User Profile Details Page -->
+                            <p>{{creatures.owner.username}}</p>
+                            <span>{{creatures.location}}</span>
+
+                            {{#if isOwner}}
+                            <div class="edit-delete-btns">
+
+                                <!-- Edit Pet Photo -->
+                                <a href="/creatures/{{creatures._id}}/edit">
+                                    <img class="edit-img" src="/static/images/edit-pen-icon-6.jpg" alt="edit button">
+                                </a>
+
+                                <!--Delete Pet Photo -->
+                                <a href="/creatures/{{creatures._id}}/delete">
+                                    <img class="bin-img" src="/static/images/icon-remove-22.jpg" alt="bin button">
+                                </a>
+                            </div>
+                            {{/if}}
+                        </h3>
+                    </div>
+
+                </div>
+
+                <!-- Start Pet Photo -->
+                <div class="imgBx">
+                    <!-- Pet Photo -->
+                    <img src="{{creatures.image}}" alt="{{creature.name}}" class="cover">
+                </div>
+
+
+
+                <div class="bottom">
+
+                    <p class="message">
+                        <b class="petDescription">{{creatures.description}}</b>
+                    </p>
+
+
+                    <!-- Photo description -->
+                    <div class="pet-details">
+                        <p class="petName">Name: {{creatures.name}}</p>
+                        <p class="petAge">Age: {{creatures.age}}</p>
+                    </div>
+
+
+                    <div class="comments">
+                        <div class="comments-top">
+
+                            {{#each creatures.commentList}}
+
+                            {{> comment}}
+
+                            {{/each}}
+
+                        </div>
+                    </div>
+                </div>
+                {{#if isAuthenticated}}
+                {{#unless isOwner}}
+                <div class="addComments">
+                    <!-- Start Add Comments Form -->
+                    <form method="POST" action="/creatures/{{creatures._id}}/comments">
+                        <textarea id="comment-textarea" name="message" cols="40" rows="10"
+                            placeholder="Add comment..."></textarea>
+                        <!-- Post Comments Button -->
+                        <button type="submit">Post</button>
+                    </form>
+                </div>
+                {{/unless}}
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</main>
+--}}
