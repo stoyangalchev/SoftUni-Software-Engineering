@@ -1,0 +1,97 @@
+<main>
+    <section id="all-course-page">
+        <article class="all-course-title">
+            <h1>All Courses</h1>
+        </article>
+        {{#if creatures}}
+
+        {{#each creatures}}
+        <!--If there are course in the database, show each one-->
+        <article class="all-course-card">
+            <article class="all-course-card-image">
+                <!-- Do not forget to change the path to the image -->
+                <img src="{{image}}">
+            </article>
+
+            <article class="all-course-card-content">
+                <!--You must put the headline value in <h2>-->
+                <h2>{{title}}</h2>
+                <!--You must put the headline value in <h3>-->
+                <h3>Type: {{type}}</h3>
+                <h3>Price: €{{price}}</h3>
+            </article>
+
+            <article class="all-course-card-buttons">
+                <a href="/creatures/{{_id}}/details" class="btn-details">Details</a>
+            </article>
+        </article>
+        {{/each}}
+
+
+
+
+        <!--If there are still no blogs in the database display:-->
+        {{else}}
+        <article class="not-available-courses">
+            <h1>No course created yet.</h1>
+        </article>
+
+
+        {{/if}}
+    </section>
+</main>
+{{!--
+<main>
+
+    <section id="all-course-page">
+        <article class="all-course-title">
+            <h1>All Courses</h1>
+        </article>
+
+        <!--If there are course in the database, show each one-->
+        <article class="all-course-card">
+            <article class="all-course-card-image">
+                <!-- Do not forget to change the path to the image -->
+                <img src="https://cdn.pixabay.com/photo/2015/08/24/20/13/welcome-905562_1280.png">
+            </article>
+
+            <article class="all-course-card-content">
+                <!--You must put the headline value in <h2>-->
+                <h2>Spanish 1-4: Beginner, Elementary</h2>
+                <!--You must put the headline value in <h3>-->
+                <h3>Type: Language</h3>
+                <h3>Price: €15</h3>
+            </article>
+
+            <article class="all-course-card-buttons">
+                <a href="#" class="btn-details">Details</a>
+            </article>
+        </article>
+
+        <article class="all-course-card">
+            <article class="all-course-card-image">
+                <!-- Do not forget to change the path to the image -->
+                <img
+                    src="https://media.istockphoto.com/id/1092170968/vector/open-book-with-history-doodles-and-lettering.jpg?s=1024x1024&w=is&k=20&c=K5vJfRRpMeZXaSafw0gA1Wxya6XtiOqXlRqHOAkIJAM=">
+            </article>
+
+            <article class="all-course-card-content">
+                <!--You must put the headline value in <h2>-->
+                <h2>Art History Prehistory to the Renaissance</h2>
+                <!--You must put the headline value in <h3>-->
+                <h3>Type: Art History</h3>
+                <h3>Price: €17</h3>
+            </article>
+
+            <article class="all-course-card-buttons">
+                <a href="#" class="btn-details">Details</a>
+            </article>
+        </article>
+
+        <!--If there are still no blogs in the database display:-->
+        <!-- <article class="not-available-courses">
+                <h1>No course created yet.</h1>
+            </article> -->
+
+    </section>
+</main> --}}
