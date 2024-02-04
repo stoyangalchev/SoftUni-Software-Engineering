@@ -1,0 +1,41 @@
+<main>
+    {{#if error}}
+    <div class="error-box">
+        <p>error</p>
+    </div>
+    {{/if}}
+    <!-- Browse Page -->
+    <section id="catalog-section" class="spaced">
+
+        <h1 class="item">Auctions</h1>
+
+        <!-- List of available auctions -->
+        {{#if creatures}}
+        <ul class="catalog cards">
+
+            {{#each creatures}}
+            {{> creatures-card}}
+            {{/each}}
+
+
+        </ul>
+        {{else}}
+        <!-- If there are no auctions to display -->
+        <div class="item pad-large align-center">
+            <p>Nothing has been listed yet. Be the first!</p>
+            <div>
+                <a class="action" href="/creatures/create">Publish Auction</a>
+            </div>
+        </div>
+        {{/if}}
+
+    </section>
+
+</main>
+
+<footer>SoftUni &copy; 2022 | Design by Viktor Kostadinov</footer>
+</div>
+
+</body>
+
+</html>
