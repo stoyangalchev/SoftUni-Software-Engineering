@@ -1,0 +1,35 @@
+<main>
+
+    {{#if error}}
+    <div>
+        <div class="errorContainer">
+            <p>{{error}}</p>
+        </div>
+    </div>
+    {{/if}}
+
+    <section id="edit-container">
+        <div class="edit-container-info">
+            <h1>Edit Announcement</h1>
+            <form method="POST">
+                <label>Name:</label>
+                <input type="text" id="name" name="name" value="{{creatures.name}}">
+                <label>Image:</label>
+                <input type="text" id="image" name="image" value="{{creatures.image}}">
+                <label>Price:</label>
+                <input type="number" id="price" name="number" value="{{creatures.price}}">
+                <label>Description:</label>
+                <textarea name="description" id="description">{{creatures.description}}</textarea>
+                <label>Payment method:</label>
+                <select id="payment" name="payment">
+                    <option value="{{creatures.payment}}" hidden="hidden" selected>{{creatures.payment}}</option> //Here is trickky part
+                    <option value="crypto-wallet">Crypto Wallet</option>
+                    <option value="credit-card">Credit Card</option>
+                    <option value="debit-card">Debit Card</option>
+                    <option value="paypal">PayPal</option>
+                </select>
+                <input type="submit" id="btn" value="EDIT"></input>
+            </form>
+        </div>
+    </section>
+</main>
