@@ -1,0 +1,71 @@
+<main class="dashboard">
+    <section id="dashboard">
+        <h2>Animals in Need</h2>
+        {{#if creatures}}
+        <ul class="card-wrapper">
+            <!-- Display a li with information about every post (if any)-->
+
+            {{#each creatures}}
+            {{> creatures-card }}
+            {{/each}}
+
+        </ul>
+
+        {{else}}
+        <!-- Display an h2 if there are no posts -->
+        <div id="no-post">
+            <h2>There are no animals in need now! </h2>
+        </div>
+        {{/if}}
+    </section>
+</main>
+{{!-- <main>
+    <section id="viewCatalog" class="background-img">
+        <!--If there are one or more electronics-->
+        <div class="added-electronics">
+
+            {{#if creatures}}
+
+
+
+            <!-- If there are posts for creature in the database display each of them -->
+            {{#each creatures}}
+            {{> creatures-card }}
+            {{/each}}
+
+            {{else}}
+
+            <!--If there are no electronics in catalog yet-->
+            <div class="guest">
+                There are no electronics found...
+            </div>
+            {{/if}}
+    </section>
+</main>
+--}}
+
+
+
+{{!-- <main>
+
+    <div class="container">
+        <div class="col-9">
+            {{#if creatures}}
+
+
+            <!-- If there are posts for creature in the database display each of them -->
+            {{#each creatures}}
+            {{> creatures-card }}
+            {{/each}}
+
+            {{else}}
+            <!-- If there are still no posts in the database display: -->
+            <div class="guest">
+                There are no electronics found...
+            </div>
+            {{/if}}
+
+        </div>
+    </div>
+
+</main> --}}
