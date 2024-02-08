@@ -1,0 +1,54 @@
+<main class="details">
+    <!-- Details page -->
+    <section id="details">
+        <div id="details-wrapper">
+            <p id="details-title">Name: {{creatures.name}}</p>
+            <div id="img-wrapper">
+                <img src="{{creatures.image}}" />
+            </div>
+            <div id="info-wrapper">
+                <table>
+                    <tr>
+                        <td>
+                            <p>
+                                Years: <span id="details-years">{{creatures.years}}</span>
+                            </p>
+                        </td>
+                        <td>
+                            <p>Kind: <span id="details-kind">{{creatures.kind}}</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Need of: <span id="details-need">{{creatures.need}}</span></p>
+                        </td>
+                        <td>
+                            <p>Location: <span id="details-location">{{creatures.location}}</span></p>
+                        </td>
+                    </tr>
+                </table>
+                <p>Description: <span id="details-description">{{creatures.description}}</span></p>
+            </div>
+
+            <!--Edit and Delete are only for creator-->
+            {{#if isAuthenticated}}
+            <div id="action-buttons">
+                {{#if isOwner}}
+                <a href="/creatures/{{creatures._id}}/edit" id="edit-btn">Edit</a>
+                <a href="/creatures/{{creatures._id}}/delete" id="delete-btn">Delete</a>
+                {{else}}
+
+                {{#if isBouth}}
+
+                <p id="already-donated">You already donated!</p>
+                {{else}}
+
+                <a href="/creatures/{{creatures._id}}/buy" id="donation-btn">Donation</a>
+                {{/if}}
+                {{/if}}
+
+            </div>
+            {{/if}}
+        </div>
+    </section>
+</main>
