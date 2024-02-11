@@ -6,17 +6,17 @@ const SALT_ROUNDS = 10;
 const userSchema = new mongoose.Schema({
   email: {
     type: String,
-    require: [true, "Username is required!"],
+    required: [true, "Username is required!"],
     minLength: 3,
   },
   username: {
     type: String,
-    require: [true, "Username is required!"],
+    required: [true, "Username is required!"],
     minLength: 3,
   },
   password: {
     type: String,
-    require: [true, "Password is required!"],
+    required: [true, "Password is required!"],
     minLength: 4,
   },
 });
