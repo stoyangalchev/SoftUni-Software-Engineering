@@ -2,22 +2,26 @@ const router = require("express").Router();
 const authServices = require("../services/authServices");
 const { isGuest, isAuth } = require("../middleware/authMiddleware");
 const { AUTH_COOKIE_NAME } = require("../constants");
+const { MongooseError } = require("mongoose");
+const { ValidationError } = require("mongoose").Error;
+const { ValidatorError } = require("mongoose").Error;
+const MongoServerError = require("mongodb").MongoServerError;
+const { log } = require("util");
 
 router.get("/login", isGuest, (req, res) => {
   res.render("auth/login");
 });
-
 router.post("/login", isGuest, async (req, res) => {
-  const { email, password } = req.body;
+  const { username, password } = req.body;
   try {
     let token = await authServices.login({
-      email,
+      username,
       password,
     });
     res.cookie(AUTH_COOKIE_NAME, token);
     res.redirect("/");
   } catch (error) {
-    res.render("auth/login", { error: error.message });
+    res.render("auth/login", { ...req.body, error: error.message });
   }
 });
 
@@ -26,7 +30,7 @@ router.get("/register", isGuest, (req, res) => {
 });
 
 router.post("/register", isGuest, async (req, res) => {
-  const { firstname, lastname, email, password, rePass } = req.body;
+  const { username, password, rePass, address } = req.body;
 
   if (password !== rePass) {
     res.locals.error = "Passwords do not match!";
@@ -35,44 +39,49 @@ router.post("/register", isGuest, async (req, res) => {
 
   try {
     await authServices.register({
-      firstname,
-      lastname,
-      email,
+      username,
       password,
+      rePass,
+      address,
     });
 
     let token = await authServices.login({
-      email,
+      username,
       password,
     });
     res.cookie(AUTH_COOKIE_NAME, token);
     res.redirect("/");
   } catch (error) {
-    res.render("auth/register", { error: getErrorMessage(error) });
+    res.render("auth/register", { ...req.body, error: getErrorMessage(error) }); ////ADDED username and address
   }
 });
 
 function getErrorMessage(error) {
   console.log(error);
-
+console.log("..............xxxx.x..");
   if (
-    error.name == "MongoServerError" ||
-    error.name == "TypeError" ||
-    error.name == "ValidationError" ||
-    error.name == "ObjectParameterError"
+    error instanceof MongooseError ||
+    error instanceof Error ||
+    error instanceof ValidationError ||
+    error instanceof ValidatorError ||
+    error instanceof MongoServerError
   ) {
-    let usernameError = error.keyValue.username;
-    let emailError = error.keyValue.email;
-    return usernameError || emailError
-      ? "Username or email is already taken!"
-      : error.message;
-    // return error.message.split("{")[1].split(" ")[2] + " is already taken!";
+    let usernameError = error.keyValue?.username;
+    let addressError = error.keyValue?.address;
+    if (usernameError || addressError) {
+      return "Username or address is already taken!";
+    } else if (!usernameError && !addressError) {
+        let errorsArr = Object.keys(error.errors);
+      return error.errors[errorsArr[0]];
+    }
   }
+console.log("scscscscasdc/..................................")
   let errorsArr = Object.keys(error.errors);
-
   if (errorsArr.length > 0) {
+    console.log(errorsArr);
     return error.errors[errorsArr[0]];
   } else {
+    console.log("3````");
     return error.message;
   }
 }
