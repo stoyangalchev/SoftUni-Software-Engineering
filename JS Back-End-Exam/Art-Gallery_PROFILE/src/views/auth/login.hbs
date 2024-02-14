@@ -1,28 +1,26 @@
 <main>
 
-    <section id="login-page">
+    <section id="login-container">
 
-        <div class="loginSection">
-            <div class="info">
-                <h2>"Hearing voices no one else can hear isn't a good sign, even in the wizarding world."</h2>
-            </div>
-            <form action="/auth/login" method="POST" class="loginForm">
+        <div class="container">
+            <!-- Do not forget to change the path to the image -->
+            <img src="/static/img/slider.jpg" alt="image">
+
+            <form action="/auth/login" method="post" class="container-text">
                 <h2>Login</h2>
-                <ul class="noBullet">
-                    <li>
-                        <label for="email">Email:</label>
-                        <input type="text" class="inputFields" id="email" name="email" placeholder="alex@gmail.com" />
-                    </li>
-                    <li>
-                        <label for="password">Password:</label>
-                        <input type="password" class="inputFields" id="password" name="password"
-                            placeholder="*******" />
-                    </li>
+                <p>Welcome, see the new masterpieces!</p>
 
-                    <li id="center-btn">
-                        <button id="login-btn">Login</button>
-                    </li>
-                </ul>
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="ivan_00" name="username" value="{{username}}">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="*****" name="password">
+
+                <button class="login-btn">Login</button>
+                <div class="card-no-account">
+                    <p>Don't have an account? <a href="/auth/register">Sign up</a>.</p>
+                </div>
+
             </form>
         </div>
 
