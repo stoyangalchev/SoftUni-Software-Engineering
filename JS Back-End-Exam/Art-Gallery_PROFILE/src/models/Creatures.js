@@ -1,25 +1,14 @@
 const mongoose = require("mongoose");
 
 let creaturesSchema = new mongoose.Schema({
-  name: {
+  title: {
     type: String,
-    required: [true, "Name is required!"],
+    required: [true, "Tittle is required!"],
     minLength: 2,
   },
-  species: {
+  technique: {
     type: String,
-    required: [true, "species is required!"],
-    minLength: 3,
-  },
-  skinColor: {
-    type: String,
-    required: [true, "skinColor is required!"],
-    minLength: 3,
-  },
-
-  eyeColor: {
-    type: String,
-    required: [true, "eyeColor is required!"],
+    required: [true, "Technique is required!"],
     minLength: 3,
   },
   image: {
@@ -27,26 +16,27 @@ let creaturesSchema = new mongoose.Schema({
     required: true,
     validate: [/^https?:\/\//i, "Invalid image URL!"],
   },
-  description: {
+  certificate: {
     type: String,
-    required: [true, "description is required!"],
-    minLength: 5,
-    maxLength: 500,
+    required: [true, "Certificate is required!"],
+    enum: {
+      values: ["yes", "no"],
+      message: "Certificate must be yes or no",
+    },
+  },
+  owner: {
+    type: mongoose.Types.ObjectId,
+    ref: "User",
   },
 
   votes: [
     {
       user: {
         type: mongoose.Types.ObjectId,
-        required: "true",
         ref: "User",
       },
     },
   ],
-  owner: {
-    type: mongoose.Types.ObjectId,
-    ref: "User",
-  },
 });
 
 // creaturesSchema.method("getComment", function () {
