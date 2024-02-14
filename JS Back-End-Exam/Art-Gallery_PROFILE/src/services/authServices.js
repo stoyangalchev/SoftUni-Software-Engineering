@@ -4,8 +4,8 @@ const { JWT_Secret } = require("../constants");
 
 exports.register = (userData) => User.create(userData);
 
-exports.login = async ({ email, password }) => {
-  let user = await User.findOne({ email });
+exports.login = async ({ username, password }) => {
+  let user = await User.findOne({ username });
 
   console.log(user);
 
@@ -18,10 +18,13 @@ exports.login = async ({ email, password }) => {
   if (!isValid) {
     throw new Error("Invalid email or password");
   }
+  if (!password) {
+    throw new Error("Invalid username or password");
+  }
 
   let payload = {
     _id: user._id,
-    email: user.email,
+    username: user.username,
   };
 
   let token = await jwt.sign(payload, JWT_Secret);
