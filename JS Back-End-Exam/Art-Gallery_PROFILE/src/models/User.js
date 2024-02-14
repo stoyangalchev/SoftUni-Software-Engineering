@@ -4,26 +4,29 @@ const bcrypt = require("bcrypt");
 const SALT_ROUNDS = 10;
 
 const userSchema = new mongoose.Schema({
-  firstname: {
+  username: {
     type: String,
     required: [true, "Username is required!"],
+    unique: true,
     minLength: 3,
-  },
-  lastname: {
-    type: String,
-    required: [true, "Username is required!"],
-    minLength: 3,
-  },
-  email: {
-    type: String,
-    required: [true, "Email is required!"],
-    minLength: 8,
   },
   password: {
     type: String,
     required: [true, "Password is required!"],
     minLength: 4,
   },
+
+  address: {
+    type: String,
+    required: [true, "Address is required!"],
+    minLength: 8,
+  },
+  publications: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Creatures",
+    },
+  ],
 });
 
 userSchema.pre("save", function (next) {
