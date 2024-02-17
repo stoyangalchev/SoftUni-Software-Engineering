@@ -1,123 +1,40 @@
 <main>
-
     <section id="details-page">
+        <h1>Details</h1>
+        <article class="details-card">
 
-        <div class="main_card">
-            <div class="card_left">
-                <div class="card_datails">
+            <article class="details-card-text">
+                <h2>Title:<br> {{creatures.title}}</h2>
+                <h3>Author: {{creatures.owner.username}}</h3>
+                <h3>Painting technique: {{creatures.technique}}</h3>
+                <h3>Certificate of authenticity: {{creatures.certificate}}</h3>
 
-                    <h1>Name: {{creatures.name}}</h1>
-                    <h3>Created by an author: {{creatures.owner.firstname}} {{creatures.owner.lastname}}</h3>
-                    <div class="card_character">
-                        <p class="card-species">Species: {{creatures.species}}</p>
-                        <p class="card-skin">Skin colour: {{creatures.skinColor}}</p>
-                        <p class="card-eye">Eye Colour: {{creatures.eyeColor}}</p>
-                    </div>
-
-                    <p class="disc">Description : {{creatures.description}}.</p>
-
-                    {{#if isAuthenticated}}
-                    <!-- If there is no registered user, do not display buttons-->
-                    <div class="social-btn">
-                        {{#if isOwner}}
-                        <!-- Only for registered user and author of the post -->
-                        <a href="/creatures/{{creatures._id}}/edit" class="edit-btn">Edit</a>
-                        <a href="/creatures/{{creatures._id}}/delete" class="del-btn">Delete</a>
-                        {{else}}
-                        {{#if isVoted}}
-                        <!-- logged in users, who have not yet voted-->
-                        <p class="thanks-for-vote">Thanks For Voting</p>
-                        {{else}}
-                        <!-- logged in user who has already voted-->
-                        <a href="/creatures/{{creatures._id}}/vote" class="vote-up">Vote</a>
-                        {{/if}}
-
-                        {{/if}}
-                        {{/if}}
-                    </div>
-                </div>
-            </div>
-            <div class="card_right">
-                <img src="{{creatures.image}}" alt="image">
-            </div>
-        </div>
-
-    </section>
-
-    <section id="votes">
-        <div class="vote-info">
-            <div class="card_left">
-                <div class="card_datails">
-                    <h1>Votes</h1>
-                    <div class="card_vote">
-                        <!-- Show the rating of votes, if there are no votes yet, the number must be 0. -->
-
-                        <p class="PV">Total rating of votes: {{voteLength}}</p>
-                    </div>
-
-                    {{#if aray}}
-                    <!-- If there are already people who have cast their vote for the post, separate their emails with a comma and a space ", " -->
-                    <p class="disc">People who voted for the post -{{aray}} </p>
+                {{#if isAuthenticated}}
+                <!-- If there is no registered user, do not display buttons-->
+                <div class="buttons">
+                    <!-- Only for registered user and author of the publication -->
+                    {{#if isOwner}}
+                    <a href="/creatures/{{creatures._id}}/edit" class="btn-edit">Edit</a>
+                    <a href="/creatures/{{creatures._id}}/delete" class="btn-delete">Delete</a>
                     {{else}}
-                    <!-- If not display: -->
-                    <p class="disc">People who voted for the post - No one has voted yet.</p>
+                    {{#if isVoted}}
+                    <!-- logged in user who has not yet shared the publication-->
+                    <p class="shared-pub">You already shared this publication</p>
+                    <!-- logged in user who has already shared the publication-->
+                    {{else}}
+
+                    <a href="/creatures/{{creatures._id}}/vote" class="btn-share">Share publication</a>
                     {{/if}}
-
                 </div>
-            </div>
-        </div>
+
+                {{/if}}
+                {{/if}}
+            </article>
+
+            <article class="details-card-image">
+                <img src="{{creatures.image}}" alt="art-image2">
+            </article>
+
+        </article>
     </section>
-
 </main>
-
-
-
-{{!--
-
-<main>
-    <div class="details-container">
-        <div class="details-container-image">
-            <img src="{{creatures.image}}">
-        </div>
-        <div class="details-container-info">
-            <h2>Title: {{creatures.title}}</h2>
-            <h3>Type: {{creatures.type}}</h3>
-            <h3>Certificate: {{creatures.certificate}}</h3>
-            <h3>Price: €{{creatures.price}}</h3>
-            <h3>By: {{creatures.owner.username}}</h3>
-            <!--If there are sign up users-->
-            {{#if signedArrayOfUsersNames}}
-            <h4>Signed By:
-                {{ signedArrayOfUsersNames }}
-
-
-            </h4>
-            <!--If there are no sign up users-->
-            {{else}}
-            <h4>Nobody has signed in for this course yet</h4>
-            {{/if}}
-        </div>
-        <div class="details-container-content">
-            <p>{{creatures.description}}</p>
-        </div>
-        {{#if isAuthenticated}}
-        <div class="btn-container">
-            <!-- Only for registered user and creator of the course-->
-            {{#if isOwner}}
-            <a href="/creatures/{{creatures._id}}/edit">Edit</a>
-            <a href="/creatures/{{creatures._id}}/delete">Delete</a>
-
-            {{else}}
-            <!-- logged in user who has not yet sign up for the course-->
-            {{#if isSigned}}
-            <!-- logged in user who has already sign up for the course-->
-            <p class="sign-up">You've already signed up for this course!</p>
-            {{else}}
-            <a href="/creatures/{{creatures._id}}/signup">Sign up</a>
-            {{/if}}
-
-            {{/if}}
-        </div>
-        {{/if}}
-    </div>
-</main> --}}
