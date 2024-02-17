@@ -3,7 +3,6 @@ const creaturesServices = require("../services/creaturesServices");
 
 const { isAuth } = require("../middleware/authMiddleware");
 const { log } = require("util");
-const { hash } = require("bcrypt");
 
 router.get("/all-posts", async (req, res) => {
   let creatures = await creaturesServices.getAll();
@@ -17,8 +16,11 @@ router.get("/create", isAuth, (req, res) => {
 
 router.post("/create", isAuth, async (req, res) => {
   try {
-    console.log(req.body);
-    await creaturesServices.create({ ...req.body, owner: req.user._id });
+    await creaturesServices.create({
+      ...req.body,
+      owner: req.user._id,
+    });
+
     res.redirect("/"); //change to all-posts //  /creatures/all-posts
   } catch (error) {
     console.log(error);
@@ -48,15 +50,10 @@ router.get("/:id/details", async (req, res) => {
   let isVoted =
     req.user && creatures.votes.some((c) => c.user._id == req.user?._id);
 
-''
+  ("");
   let owner = await creaturesServices.findOwner(creatures.owner._id).lean();
 
   let voteLength = creatures.votes.length;
-
-  // let newArr = allVotedArr.map(async (x) => {
-  //   let user = await creaturesServices.findOwner(x);
-  //   x = user.email;
-  // });
 
   creatures.votes
     .map((x) => x.user._id)
