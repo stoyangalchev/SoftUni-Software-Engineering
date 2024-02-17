@@ -58,7 +58,7 @@ router.post("/register", isGuest, async (req, res) => {
 
 function getErrorMessage(error) {
   console.log(error);
-console.log("..............xxxx.x..");
+
   if (
     error instanceof MongooseError ||
     error instanceof Error ||
@@ -71,23 +71,23 @@ console.log("..............xxxx.x..");
     if (usernameError || addressError) {
       return "Username or address is already taken!";
     } else if (!usernameError && !addressError) {
-        let errorsArr = Object.keys(error.errors);
+      let errorsArr = Object.keys(error.errors);
       return error.errors[errorsArr[0]];
     }
   }
-console.log("scscscscasdc/..................................")
+
   let errorsArr = Object.keys(error.errors);
   if (errorsArr.length > 0) {
     console.log(errorsArr);
     return error.errors[errorsArr[0]];
   } else {
-    console.log("3````");
     return error.message;
   }
 }
 
 router.get("/logout", isAuth, (req, res) => {
   res.clearCookie(AUTH_COOKIE_NAME);
+  
   res.redirect("/");
 });
 
