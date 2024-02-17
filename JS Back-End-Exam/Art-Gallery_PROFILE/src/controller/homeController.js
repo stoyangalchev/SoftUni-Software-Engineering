@@ -5,8 +5,14 @@ const creaturesServices = require("../services/creaturesServices");
 
 router.get("/", async (req, res) => {
   let creatures = await creaturesServices.getAll();
+  let voteLength;
+  for (let i = 0; i < creatures.length; i++) {
+    let voteLength = creatures[i].votes.length;
+    creatures[i].voteLength = voteLength;
+  }
 
-  res.render("home", { creatures });
+
+  res.render("home", { creatures, voteLength });
 });
 
 // router.get("/profile", isAuth, async (req, res) => {
@@ -22,7 +28,7 @@ router.get("/", async (req, res) => {
 //     creaturesCount: creatures.length,
 //   });
 // });
-router.get("/profile", async (req, res) => {
+router.get("/profile", isAuth, async (req, res) => {
   let userId = req.user._id;
 
   let creatures = await creaturesServices.getMyCreatedPost(userId);
@@ -33,7 +39,9 @@ router.get("/profile", async (req, res) => {
     creatures[i].voteLength = voteLength;
   }
   console.log(creatures);
+  console.log(owner);
+  
 
-  res.render("my-posts", { creatures, owner, voteLength });
+  res.render("profile", { creatures, owner, voteLength });
 });
 module.exports = router;
