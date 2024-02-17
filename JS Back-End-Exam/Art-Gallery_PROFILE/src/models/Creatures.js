@@ -9,16 +9,17 @@ let creaturesSchema = new mongoose.Schema({
   technique: {
     type: String,
     required: [true, "Technique is required!"],
-    minLength: 3,
+    minLength: [3, "Technique must be at least 3 characters!"],
   },
   image: {
     type: String,
-    required: true,
+    required: [true, "Image is required!"],
     validate: [/^https?:\/\//i, "Invalid image URL!"],
   },
   certificate: {
     type: String,
     required: [true, "Certificate is required!"],
+    lowercase: true,
     enum: {
       values: ["yes", "no"],
       message: "Certificate must be yes or no",
