@@ -1,0 +1,57 @@
+<main>
+    <section id="deatils-page">
+        <div class="wrapper">
+            <div class="product-img">
+                <img src="{{creatures.image}}">
+            </div>
+            <div class="product-info">
+                <div class="product-text">
+                    <div class="product-text">
+                        <h1>Name: {{creatures.name}}</h1>
+                        <h2>Type: {{creatures.type}}</h2>
+                        <h4>Year: {{creatures.year}}</h4>
+                        <h4>City: {{creatures.city}}</h4>
+                        <p>Description: {{creatures.description}}</p>
+
+                        <!-- if there are already tenants of the housing, separate their names with a comma and a space ", "  -->
+                        {{#if peopleBuy}}
+                        <p>People rented this housing:{{peopleBuy}}
+                        </p>
+                        {{else}}
+                        <!-- If not display: -->
+                        <p>People rented this housing: There are no tenants yet.</p>
+                        {{/if}}
+                    </div>
+                </div>
+                {{#if isAuthenticated}}
+                <!-- if there is no registered user, do not display buttons-->
+                <div class="product-btn">
+                    <!-- Only for registered user and creator of the housing offer-->
+                    {{#if isOwner}}
+                    <a href="/creatures/{{creatures._id}}/edit" class="edit">Edit</a>
+                    <a href="/creatures/{{creatures._id}}/delete" class="remove">Delete</a>
+                    {{else}}
+
+
+                    {{#if isBouth }}
+                    <p class="alRentHome">You have already rent this home</p>
+                    {{else}}
+                    <!-- logged in user with available pieces-->
+                    {{#if isFull}}
+
+                    <p class="no-housing">No Housing Available!</p>
+                    {{else}}
+                    <a href="/creatures/{{creatures._id}}/buy" class="rentHome">RENT A HOME, AVAILABLE
+                        {{creatures.pieces}} HOUSING</a>
+                    {{/if}}
+
+                    {{/if}}
+
+                    {{/if}}
+
+                </div>
+                {{/if}}
+            </div>
+        </div>
+    </section>
+</main>
