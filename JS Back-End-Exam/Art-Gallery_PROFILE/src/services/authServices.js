@@ -15,11 +15,11 @@ exports.login = async ({ username, password }) => {
     throw new Error("Invalid email or password");
   }
 
-  let isValid = await user.validatePassword(password);
+  // let isValid = await user.validatePassword(password);
 
-  if (!isValid) {
-    throw new Error("Invalid Password ");
-  }
+  // if (!isValid) {
+  //   throw new Error("Invalid Password ");
+  // }
   if (!password) {
     throw new Error("Invalid username or password");
   }
