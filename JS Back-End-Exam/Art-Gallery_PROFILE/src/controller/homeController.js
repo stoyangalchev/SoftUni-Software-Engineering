@@ -11,7 +11,6 @@ router.get("/", async (req, res) => {
     creatures[i].voteLength = voteLength;
   }
 
-
   res.render("home", { creatures, voteLength });
 });
 
@@ -32,16 +31,19 @@ router.get("/profile", isAuth, async (req, res) => {
   let userId = req.user._id;
 
   let creatures = await creaturesServices.getMyCreatedPost(userId);
-  let owner = await creaturesServices.findOwner(userId);
-  let voteLength;
-  for (let i = 0; i < creatures.length; i++) {
-    let voteLength = creatures[i].votes.length;
-    creatures[i].voteLength = voteLength;
-  }
-  console.log(creatures);
-  console.log(owner);
-  
+  let owner = await creaturesServices
+    .findOwner(userId)
+    .populate("sharedpost")
+    .lean();
 
-  res.render("profile", { creatures, owner, voteLength });
+  let sharedPost = await creaturesServices
+    .findOwner(userId)
+    .populate("sharedpost")
+    .lean();
+let shared = sharedPost.sharedpost;
+  console.log(creatures);
+  console.log(">>>>>>>>");
+
+  res.render("profile", { creatures, owner, shared });
 });
 module.exports = router;
