@@ -45,7 +45,7 @@ router.get("/:id/details", async (req, res) => {
     .getOne(creaturesId)
     .populate("owner")
     .lean();
-  let isOwner = req.user?._id == creatures.owner._id;
+  let isOwner = req.user?._id == creatures.owner?._id;
 
   let isVoted =
     req.user && creatures.votes.some((c) => c.user._id == req.user?._id);
@@ -79,7 +79,8 @@ router.get("/:id/vote", async (req, res) => {
     const user = req.user._id;
 
     await creaturesServices.vote(creaturesId, { user });
-
+    await creaturesServices.sharedpostPushtoUser(creaturesId, user);
+    
     res.redirect(`/creatures/${creaturesId}/details`);
   } catch (error) {
     console.log(getErrorMessage(error));
