@@ -31,6 +31,7 @@ exports.updateOne = (creaturesId, creaturesData) =>
 //   creatures.signUpList.push(commentData);
 //   return creatures.save();
 // };
+
 //Gives the owner of the creature.
 exports.findOwner = (userId) => User.findById(userId).lean();
 
@@ -44,8 +45,15 @@ exports.vote = async (creaturesId, commentData) => {
 
   return creatures.save();
 };
+exports.sharedpostPushtoUser = async (creaturesId, userId) => {
+  const user = await User.findById(userId);
 
-exports.getMyVoteUp = (userId) => Creatures.find(userId).lean();
+  user.sharedpost.push(creaturesId);
 
-exports.getOne = (courseId) =>
+  await user.save();
+};
+
+exports.getMyVoteUp = (userId) => Creatures.find({ _id: userId }).lean();
+
+exports.getOneDetailed = (courseId) =>
   Creatures.findById(courseId).populate("votes").lean();
