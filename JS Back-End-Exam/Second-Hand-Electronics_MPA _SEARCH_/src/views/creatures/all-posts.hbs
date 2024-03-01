@@ -1,0 +1,50 @@
+<main>
+    <section id="viewCatalog" class="background-img">
+        <!--If there are one or more electronics-->
+        <div class="added-electronics">
+
+            {{#if creatures}}
+
+
+
+            <!-- If there are posts for creature in the database display each of them -->
+            {{#each creatures}}
+            {{> creatures-card }}
+            {{/each}}
+
+            {{else}}
+
+            <!--If there are no electronics in catalog yet-->
+            <div class="guest">
+                There are no electronics found...
+            </div>
+            {{/if}}
+    </section>
+</main>
+
+
+
+
+{{!-- <main>
+
+    <div class="container">
+        <div class="col-9">
+            {{#if creatures}}
+
+
+            <!-- If there are posts for creature in the database display each of them -->
+            {{#each creatures}}
+            {{> creatures-card }}
+            {{/each}}
+
+            {{else}}
+            <!-- If there are still no posts in the database display: -->
+            <div class="guest">
+                There are no electronics found...
+            </div>
+            {{/if}}
+
+        </div>
+    </div>
+
+</main> --}}
