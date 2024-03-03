@@ -1,0 +1,22 @@
+<main class="edit">
+    <!-- Edit Page (Only for logged-in users) -->
+    <section id="edit">
+        <div class="form">
+            <h2>Edit item</h2>
+            <form class="edit-form" method="POST">
+                <input type="text" name="name" id="name" placeholder="Name" value="{{creatures.name}}" />
+                <input type="text" name="category" id="category" placeholder="Category"
+                    value="{{creatures.category}}" />
+                <input type="text" name="color" id="color" placeholder="Color" value="{{creatures.color}}" />
+                <input type="text" name="image" id="stone-img" placeholder="Image" value="{{creatures.image}}" />
+                <input type="text" name="location" id="location" placeholder="Location"
+                    value="{{creatures.location}}" />
+                <input type="text" name="formula" id="formula" placeholder="Formula" value="{{creatures.formula}}" />
+                <textarea id="description" placeholder="Description..."
+                    name="description">{{creatures.description}}</textarea>
+
+                <button type="submit">Edit</button>
+            </form>
+        </div>
+    </section>
+</main>
