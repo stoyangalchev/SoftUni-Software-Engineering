@@ -1,0 +1,51 @@
+<main class="details">
+    <!-- Details page -->
+    <section id="details">
+        <div id="details-wrapper">
+            <p id="details-title">Name: {{creatures.name}}</p>
+            <div id="img-wrapper">
+                <img src="{{creatures.image}}" />
+            </div>
+            <div id="info-wrapper">
+                <table>
+                    <tr>
+                        <td>
+                            <p>
+                                Category: <span id="details-category">{{creatures.category}}</span>
+                            </p>
+                        </td>
+                        <td>
+                            <p>Color: <span id="details-color">{{creatures.color}}</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Location: <span id="details-location">{{creatures.location}}</span></p>
+                        </td>
+                        <td>
+                            <p>Formula: <span id="details-formula">{{creatures.formula}}</span></p>
+                        </td>
+                    </tr>
+                </table>
+                <p>Description: <span id="details-description">{{creatures.description}}</span></p>
+            </div>
+
+            <!--Edit and Delete are only for creator-->
+            {{#if isAuthenticated}}
+            <div id="action-buttons">
+                {{#if isOwner}}
+                <a href="/creatures/{{creatures._id}}/edit" id="edit-btn">Edit</a>
+                <a href="/creatures/{{creatures._id}}/delete" id="delete-btn">Delete</a>
+                {{else}}
+                {{#if isBouth}}
+                <p id="already-liked">You already liked this stone!</p>
+                {{else}}
+                <a href="/creatures/{{creatures._id}}/buy" id="like-btn">Like</a>
+                {{/if}}
+                {{/if}}
+
+            </div>
+            {{/if}}
+        </div>
+    </section>
+</main>
