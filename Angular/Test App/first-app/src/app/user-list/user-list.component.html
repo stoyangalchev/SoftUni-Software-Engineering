@@ -1,0 +1,7 @@
+<div id="ul-list-user">
+    <ul>
+        <li *ngFor="let s of usersa,index as i">
+            <span *ngIf="i%2==0">{{ s.name }} age {{ s.age }}</span>
+        </li>
+    </ul>
+</div>

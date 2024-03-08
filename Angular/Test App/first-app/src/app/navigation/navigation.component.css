@@ -1,0 +1,28 @@
+#wrapper {
+  background-color: #dbab57;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  margin: 10px;
+  
+
+
+}
+
+.btn {
+  border: 10px solid rgb(255, 255, 255);
+  margin: 0 10px;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: #4ecb20;
+  color: rgb(250, 253, 253);
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
