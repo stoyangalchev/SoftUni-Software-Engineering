@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "target": "es2022",
+    // "sourceMap": true,
+    "rootDir": "./src",
+    "outDir": "./dist"
+  }
+}
