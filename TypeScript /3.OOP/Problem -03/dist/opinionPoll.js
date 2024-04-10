@@ -13,12 +13,14 @@ class Person {
         this.age = Number(age);
     }
 }
+//!This is solution without setter and getter
 // const person = new Person("Peter", 26);
 // console.log(person.personInfo());
 // const person2 = new Person("Stefan", 25);
 // console.log(person2.personInfo());
+//! This is solution with setter and getter
 const person = new Person();
-person.name = "Stoyan";
-person.age = 26;
+// person.name = "Stoyan";
+// person.age = 26;
 person.personInfo = ["Stefan", "25"];
 console.log(person.personInfo);
