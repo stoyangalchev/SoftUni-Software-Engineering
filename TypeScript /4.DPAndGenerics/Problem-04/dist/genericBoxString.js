@@ -14,4 +14,3 @@ const box2 = new Box(20);
 console.log(box2.toString());
 const box3 = new Box(true);
 console.log(box3.toString());
-//# sourceMappingURL=genericBoxString.js.map
