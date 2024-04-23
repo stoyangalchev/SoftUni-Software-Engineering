@@ -1,0 +1,78 @@
+.timer {
+    height: 100px;
+    font-size: 5rem;
+    font-weight: bold;
+    color: #120000;
+    background-color: #c21010;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+.seconds {
+    margin: 0;
+    padding: 0;
+
+    justify-content: center;
+    font-size: 100px;
+    font-weight: bold;
+
+
+}
+
+.divTimer {
+
+    height: 120px;
+    color: #333;
+    background-color: #b71919;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-width: 9px;
+    border-color: #120000;
+    border-style: solid;
+
+
+}
+
+.btnReset {
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #120000;
+    background-color: #c21010;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    border-width: 9px;
+    border-color: #120000;
+    border-style: solid;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    display: inline-block;
+    height: 100px;
+    width: 300px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.5s;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+
+
+
+
+}
