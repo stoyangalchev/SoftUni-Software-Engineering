@@ -1,12 +1,19 @@
 import "./MovieList.css";
 import Movie from "../movie/Movie";
+
+
 function MovieList(props) {
+  // console.log(props.movies);
+  const array = [10, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
   return (
-    <div>
-      <Movie title={props.movies[0].title} cast={(props.movies[0].cast.join(", "))} />
-      <Movie title={props.movies[1].title} cast={(props.movies[1].cast.join(", "))} />
-      <Movie title={props.movies[2].title} cast={(props.movies[2].cast.join(", "))} />
+    <div className="movieList">
+      {props.movies.map((movie, index) => {
+        return <Movie key={index} {...movie} {...array} />
+      })}
     </div>
   );
+
 }
+
 export default MovieList;
