@@ -1,0 +1,41 @@
+/* Class and Element Combination */
+p.text-highlight {
+    color: #007BFF;
+    font-size: 18px;
+}
+
+/* ID and Element Combination */
+div#special-box {
+    background-color: #FFC107;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+/* Attribute and Class Combination */
+input[type="text"].input-text {
+    border-color: #28A745;
+    padding: 5px;
+    margin-top: 10px;
+    display: block;
+}
+
+/* Multiple Class Combination */
+.important-item.special-highlight {
+    font-style: italic;
+    font-weight: bold;
+    color: #DC3545;
+}
+
+/* Additional Styles */
+#main-content {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.box.shadow {
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.important-item {
+    color: #17A2B8;
+}
