@@ -1,0 +1,60 @@
+@media (max-width: 600px) {
+    nav img {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .our-dogs-wrapper,
+    .contact {
+        width: 100%;
+        margin: 10px;
+        padding: 2.5rem 0;
+        text-align: left;
+    }
+
+    body>main>section.our-dogs>div>ul>li>img {
+        width: 200px;
+        margin: 25px;
+        justify-content: center;
+
+    }
+
+    body>main>section.our-dogs>div>ul>li>p {
+        text-align: center;
+    }
+
+    
+        .helpNeed ul {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            list-style-type: none;
+        }
+    
+        .helpNeed li {
+            margin-bottom: 20px;
+        }
+    
+        .helpNeed li:last-child {
+            margin-bottom: 0;
+        }
+        .contact{
+            text-align: center;
+        }
+        .our-dogs-wrapper{
+            text-align: center;
+        }
+}
+
