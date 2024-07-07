@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    padding: auto;
+    margin: 100px;
+    background-color: #c2c1c1;
+
+}
+
+.singupClass {
+    display: inline-block;
+    border: #191212, 1px solid;
+    padding: 20px;
+    width: 400px;
+    height: fit-content;
+    display: block;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: rgb(45, 54, 62)
+}
+
+p {
+    text-align: center;
+    color: white;
+    margin: 15px;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.upperButton {
+    display: flex;
+    color: white;
+
+}
+
+.upperButton a {
+    flex: 1;
+    text-align: center;
+}
+
+.upperButton a:hover {
+    background-color: rgb(78, 78, 78);
+    color: rgb(210, 210, 210);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(78, 173, 127);
+    padding: 10px;
+    border-radius: 1px;
+    margin: 10px;
+
+}
+
+
+
+
+.fnamelname {
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+
+
+.input-wrapper {
+    flex: 1;
+    position: relative;
+    margin: 0 10px;
+
+    /* adjust as needed */
+}
+
+.input-wrapper input {
+    background-color: rgb(45, 54, 62);
+    color: #000;
+    border: 1px solid #c0c0c0;
+    padding: 4px;
+}
+
+.input-wrapper::after {
+    content: "*";
+    position: absolute;
+    color: green;
+    top: 3px;
+    right: 80px;
+}
+
+
+
+.emailpass {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px;
+
+}
+
+.emailpass input {
+    width: 97%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(45, 54, 62);
+    color: #000;
+    border: 1px solid #c0c0c0;
+    padding: 4px;
+
+}
+
+
+.emailpass input::after {
+    content: "*";
+    color: green;
+    position: absolute;
+    top: 0;
+}
+
+.input-wrapper2 {
+    position: relative;
+}
+
+.input-wrapper2::after {
+    content: "*";
+    color: green;
+    position: absolute;
+    top: 15px;
+    right: 250px;
+}
+
+.getstrBtn {
+    background-color: rgb(78, 173, 127, 0.9);
+    color: white;
+    padding: 10px;
+    padding-right: 10px;
+    border-radius: none;
+    margin: 10px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.getstrBtn {
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.getstrBtn:hover {
+    background-color: rgb(45, 54, 62)
+}
