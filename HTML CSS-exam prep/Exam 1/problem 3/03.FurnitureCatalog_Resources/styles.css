@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+
+}
+
+.firstContainer {
+    display: block;
+    position: relative;
+    height: calc(100vh - 40px);
+    width: 100%;
+    overflow: hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.backgroundImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.8;
+    overflow: hidden;
+
+}
+
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-size: 3em;
+}
+
+.navigation {
+    position: absolute;
+    top: 29%;
+    right: 20%;
+    z-index: 2;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navigation ul {
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.navigation a {
+    color: black;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+    .title {
+        font-size: 2em;
+
+    }
+
+
+}
+
+.birdImg {
+    position: absolute;
+    top: 160px;
+    left: 200px;
+    width: 100px;
+    height: 100px;
+}
+
+@media screen and (max-width: 1000px) {
+    .birdImg {
+        top: 90px;
+        /* Adjust as needed */
+        left: 10%;
+        /* Adjust as needed */
+        width: 50px;
+        /* Adjust as needed */
+        height: 50px;
+        /* Adjust as needed */
+    }
+}
+
+.p1 {
+    font-size: 20px;
+    justify-content: center;
+    width: 1000px;
+    text-align: center;
+    margin-top: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.buttonMoreInfo {
+    display: block;
+    margin-top: 10px;
+    background-color: none;
+    color: black;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.buttonMoreInfo1 {
+    display: absolute;
+    margin-top: 10px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    justify-content: center;
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.afterHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    /* Moves the children to the bottom of the container */
+    background-color: rgb(95, 170, 193);
+    height: 70vh;
+}
+
+.project1 {
+    display: flex;
+    width: 100%;
+    background-color: white;
+    height: 30vh;
+    margin: 30px;
+    margin-top: -70px;
+}
+
+.project1 img {
+    flex: 1;
+    /* Takes up half the space of the container */
+}
+
+.project1 div {
+    flex: 1;
+    /* Takes up the other half of the space */
+}
+
+.project1 h2 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    margin-left: 100px;
+    width: 30px;
+}
+
+.project1 p {
+    font-size: 1em;
+    margin-left: 50px;
+    /* Removes the left margin */
+    width: 50%;
+    /* Makes the paragraph take up the full width of its parent */
+}
+
+
+.catalog {
+    justify-content: center;
+    background-color: rgb(95, 170, 193);
+    text-align: center;
+    padding: 10px;
+    text-align: bottom;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.catlorem {
+    justify-content: center;
+    background-color: rgb(95, 170, 193);
+    text-align: center;
+    padding: 10px;
+    text-align: bottom;
+    font-size: 20px;
+
+}
+
+.whitesection {
+    display: flex;
+    background-color: rgb(227, 227, 227);
+    width: 100%;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.whitediv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+}
+
+
+.img-with-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    margin-top: 50px;
+}
+
+.img-with-text img {
+    max-width: 30%;
+    max-height: 150px;
+    height: 150px;
+    margin-top: 0px;
+}
+
+.afterHeader3 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+    background-color: rgb(95, 170, 193);
+}
+
+.catalog3 {
+    justify-content: center;
+    background-color: rgb(95, 170, 193);
+    text-align: center;
+    padding: 10px;
+    text-align: bottom;
+    font-size: 50px;
+    font-weight: bold;
+    margin-left: 45%;
+    margin-right: 45%;
+}
+
+.catlorem3 {
+    justify-content: center;
+    background-color: rgb(95, 170, 193);
+    text-align: center;
+    padding: 10px;
+    text-align: bottom;
+    font-size: 20px;
+    margin-left: 35%;
+    margin-right: 35%;
+
+}
+
+.project13 {
+    width: 20%;
+    aspect-ratio: 1 / 1;
+    margin: 6%;
+    box-shadow: 20px 1px 100px rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+}
+
+.project13 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.about {
+    display: block;
+    justify-content: center;
+    text-align: center;
+ margin-top: 20px;
+ font-weight:lighter,bold;
+ font-size: 30px;
+ font:2em sans-serif;
+
+}
+
+.nunc {
+    display: block;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.penatibus {
+    display: block;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 40px;
+
+}
+.copyright{
+    display: block;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+   color: white;
+  
+    background-color: rgba(0, 0, 0, 0.8);
+}
