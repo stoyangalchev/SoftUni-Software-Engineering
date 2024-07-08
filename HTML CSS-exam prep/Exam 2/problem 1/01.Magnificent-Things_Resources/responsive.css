@@ -1,0 +1,37 @@
+@media (max-width: 600px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .picture img {
+        width: 100%;
+        height: 50%;
+        margin: 0;
+    }
+
+    .h1-tittle {
+        margin: 5% 0 0 0;
+    }
+
+    .p-text {
+        margin: 5% 0 0 0;
+    }
+
+    .btn-learn {
+        margin: 5% 0 0 0;
+    }
+
+    .text {
+        background-color: rgb(133, 219, 255);
+    }
+
+    .picture {
+        background-color: rgb(133, 219, 255);
+    }
+
+    .picture img {
+        width: 100%;
+        height: 50%;
+        margin: 30px;
+    }
+}
