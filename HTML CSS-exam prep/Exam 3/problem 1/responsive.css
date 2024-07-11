@@ -1,0 +1,19 @@
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .half-width,
+    .half-width1 {
+        margin-top: 20px;
+        flex: none;
+    }
+
+    .btn1,
+    .btn2 {
+        margin-left: 0;
+        width: 100%;
+    }
+}
