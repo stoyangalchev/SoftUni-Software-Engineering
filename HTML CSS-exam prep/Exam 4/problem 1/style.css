@@ -1,0 +1,195 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('/images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between, center;
+    margin: 20px;
+
+}
+
+
+
+.horizontaldiv {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+
+}
+
+.verticaldiv {
+    width: 30%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    height: auto;
+    background-color: aliceblue;
+}
+
+.img {
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-bottom: 34px;
+    display: block;
+    border-radius: 50%;
+    background-color: aliceblue;
+}
+
+.name1 {
+    background-color: aliceblue;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 30px;
+    margin-left: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+
+}
+
+.name2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(2, 0, 0);
+}
+
+.hor-1 {
+    display: flex;
+    justify-content: space-between;
+    background-color: aliceblue;
+    margin-bottom: 20px;
+}
+
+.hor-2 {
+    display: relative;
+    justify-content: space-between;
+    background-color: aliceblue;
+    margin-bottom: 20px;
+
+}
+
+.inlinediv1 {
+    position: relative;
+    background-color: aliceblue;
+}
+
+.verticaldiv1 {
+    align-self: flex-end;
+    background-color: aliceblue;
+}
+
+
+.paragraph1 {
+    display: flex;
+    margin: 50px;
+    margin-top: 80px;
+
+}
+
+.img2 {
+    width: 200px;
+    height: 200px;
+    left: 0;
+    display: block;
+    border-radius: 50%;
+    background-color: aliceblue;
+}
+
+.name3 {
+    position: absolute;
+    margin-left: 220px;
+    margin-top: 100px;
+    font-size: 20px;
+}
+
+.paragraph2 {
+
+    margin: 50px;
+    margin-top: 50px;
+}
+
+.verticaldiv>.div70 {
+    height: 70%;
+    width: 70%;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+
+}
+
+.verticaldiv>.div30 {
+    height: 30%;
+    width: 100%;
+}
+
+.div30 {
+    position: relative;
+}
+
+.div30>.img3 {
+    position: absolute;
+    width: 100px;
+    bottom: 0;
+    height: 100px;
+    margin-right: auto;
+
+    display: block;
+
+    border-radius: 50%;
+    background-color: aliceblue;
+}
+
+.div30>.name3 {
+    position: absolute;
+    margin-left: 220px;
+    margin-top: 100px;
+    font-size: 20px;
+    bottom: 70%;
+}
+
+.quotationmark {
+position: absolute;
+    color: rgb(0, 0, 0);
+    display: inline;
+    width: 40px;
+    height: 40px;
+    margin-left: 40px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+
+}
+
+.quotationmark3{
+    position: absolute;
+        color: rgb(0, 0, 0);
+        display: inline;
+        width: 30px;
+        height: 30px;
+        margin-left: 10px;
+        margin-top: 8px;
+        margin-bottom: 0px;
+        margin-right: 80px;
+}
