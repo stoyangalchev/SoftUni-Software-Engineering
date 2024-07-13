@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Traveler</title>
+  <meta property="og:title" content="Traveler template" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+</head>
+
+<body>
+  <link rel="stylesheet" href="./style.css" />
+  <div>
+    <link href="./index.css" rel="stylesheet" />
+
+    <div class="home-container">
+      <section class="home-hero">
+        <div class="home-main">
+          <div class="home-video">
+            <img src="./images/background.jpg" class="home-video1" />
+            <div class="home-tint"></div>
+          </div>
+          <div class="home-content">
+            <header data-thq="thq-navbar" class="home-navbar">
+              <div data-thq="thq-burger-menu" class="home-menu">
+                <div class="home-links">
+                  <a href="#features" class="home-link link">Home</a>
+                  <span class="link">About</span>
+                  <span class="link">Members</span>
+                  <a href="#find" class="home-link link">News & Events</a>
+                </div>
+              </div>
+              <a class="buynow">Buy now </a>
+              <!-- <img alt="logo" src="images/listPic1.jpg" class="home-logo" /> -->
+
+            </header>
+            <div class="home-center">
+              <div class="home-heading">
+                <h1 class="home-header"><span class="about-the-span">Let's keep things organised</span>
+                </h1>
+                <p class="home-caption">
+                  In a eleifend ipsum. Proin eu elementum nunc, vel congue mi. Vestibulum ante ipsum primis in faucibus
+                  orci luctus et
+                  ultrices posuere cubilia Curae; Aenean nunc ipsum, fringilla eu posuere ac, facilisis eu lorem. Nullam
+                  lacinia eros
+                  arcu. Proin sed hendrerit erat.
+
+                </p>
+                <a href="#" class="anchor">Get Started</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="home-testimonials">
+          <div class="box">
+            <h1>Business Aims</h1>
+            <p>In a eleifend ipsum. Proin eu elementum nunc, vel congue mi. Vestibulum ante ipsum primis in faucibus
+              orci
+              luctus et
+              ultrices posuere cubilia Curae; Aenean nunc ipsum,
+              fringilla eu posuere ac, facilisis eu lorem. Nullam lacinia eros arcu. Proin sed hendrerit erat.
+              <a>More information</a>
+            </p>
+          </div>
+          <div class="box">
+            <h1>Objectives</h1>
+            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis interdum
+              facilisis arcu in
+              tempus. Proin odio elit, ultrices nec varius id, tincidunt eget tellus. Aenean eleifend ultrices
+              dignissim. Quisque
+              interdum lobortis elementum.
+
+              <a>More information</a>
+            </p>
+          </div>
+        </div>
+    </div>
+    </section>
+
+    <section class="home-articles">
+      <div id="articles" class="home-content3">
+        <h1>Sponsors</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In ipsam placeat quos libero perspiciatis, minus
+          incidunt inventore, itaque id dolor ipsa possimus, nihil ex aliquid ea iure sapiente. Alias molestias
+          exercitationem obcaecati error culpa, voluptatum assumenda ullam ex reprehenderit voluptate.
+        </p>
+        <div class="wrapper-img">
+          <div class="imgdiv"><img src="/images/sponsor1.webp" alt=""></div>
+          <div class="imgdiv"><img src="/images/sponsor2.webp" alt=""></div>
+        </div>
+        <h1>Partners</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos ea dicta soluta iste earum impedit nam
+          repudiandae doloremque minima reprehenderit.</p>
+      </div>
+    </section>
+
+    <section class="home-footer">
+      <div class="home-footer">
+        <div class="boxi">
+          <h1>Address</h1>
+          <p>BLorem ipsum dolor sit amet</p>
+          <p>consectetur adipiscing elit.</p>
+          <p>Fusce sed quam accumsan</p>
+          <p>lacinia odio a</p>
+          <p>porta enim.</p>
+          <p>In sed arcu sed elit</p>
+          <p>dictum sodales ultricies a dolor.</p>
+        </div>
+        <div class="boxi">
+          <h1>Statues and Policies</h1>
+          <p>Statutes</p>
+          <p>Code of Ethics Policy</p>
+          <p>Board Responsibilities and Obligations</p>
+          <p>Annual Finance Report 2023</p>
+          <p>Annual Finance Report 2023</p>
+          <p>Annual Finance Report 2023</p>
+        </div>
+        <div class="boxi">
+          <h1>Address</h1>
+          <p>BLorem ipsum dolor sit amet</p>
+          <p>consectetur adipiscing elit.</p>
+          <p>Fusce sed quam accumsan</p>
+          <p>lacinia odio a</p>
+          <p>porta enim.</p>
+          <p>In sed arcu sed elit</p>
+          <p>dictum sodales ultricies a dolor.</p>
+
+
+        </div>
+        <div class="boxi">
+          <h1>Address</h1>
+          <p>BLorem ipsum dolor sit amet</p>
+          <p>consectetur adipiscing elit.</p>
+          <p>Fusce sed quam accumsan</p>
+          <p>lacinia odio a</p>
+          <p>porta enim.</p>
+          <p>In sed arcu sed elit</p>
+          <p>dictum sodales ultricies a dolor.</p>
+
+        </div>
+      </div>
+    </section>
+  </div>
+  </div>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+
+</html>
