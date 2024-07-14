@@ -1,0 +1,153 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-image: url("/image/background.jpg");
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.box {
+    width: 400px;
+    height: 500px;
+    margin: 10px;
+    background-color: #f0f0f0;
+}
+
+.box.middle {
+    height: 580px;
+}
+
+
+.box h1 {
+    text-align: left;
+    padding: 25px;
+    color: #333;
+}
+
+.box h2 {
+    text-align: left;
+    padding-left: 50px;
+    color: #333;
+    font-size: 50px;
+}
+
+.box h2::before {
+    content: '$';
+    display: flex;
+    width: 1px;
+    height: 1px;
+    font-size: 17px;
+    position: relative;
+    top: 40px;
+    left: -15px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+
+
+.box h2 {
+    position: relative;
+}
+
+.box h2::after {
+    content: '/ monthly';
+    display: flex;
+    width: 100px;
+    height: 10px;
+    font-size: 17px;
+    position: absolute;
+    top: 38px;
+    right: 130px;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.box h6 {
+    text-align: left;
+    padding: 25px;
+    color: #333;
+    font-size: 10px;
+    font-weight: 200
+}
+
+.box h4 {
+    text-align: left;
+    padding: 2px;
+    padding-left: 20px;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    width: 90%
+}
+
+.btndiv {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    padding: 10px;
+    margin: 5px;
+    width: 80%;
+
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    padding: 10px;
+    margin: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 40%;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.btndiv1 {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    padding: px;
+    margin-top: 95px;
+    width: 80%;
+
+}
+
+.btn1 {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    padding: 10px;
+    margin: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 40%;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+}
