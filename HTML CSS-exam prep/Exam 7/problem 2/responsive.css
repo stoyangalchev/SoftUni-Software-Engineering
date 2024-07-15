@@ -1,0 +1,216 @@
+@media (max-width: 600px) {
+    html {
+        overflow-x: hidden
+    }
+
+    body {
+        overflow-x: hiddenddf
+    }
+
+    .magazine-title h4 {
+        font-size: 30px;
+        /* Smaller font size for smaller screens */
+    }
+
+    .magazine-title h4 span {
+        padding-left: 10px;
+        /* Less padding for smaller screens */
+    }
+
+    .magazine-title a {
+        padding-top: 20px;
+        /* Adjust padding for smaller screens */
+    }
+
+    .magazine article {
+        flex-direction: column;
+        /* Stack elements vertically on small screens */
+        width: 100%;
+        /* Use full width */
+    }
+
+    .div-header * {
+        display: none;
+    }
+
+    body>header>section>article>a {
+        transform: translateX(300%) !important;
+        margin-top: 20px;
+        /* Adjust the value as needed */
+    }
+
+    .options {
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        width: 100%;
+    }
+
+    .options article {
+        text-align: center !important;
+        border-top: 1px solid white;
+        width: 100% !important;
+        padding-bottom: 50px;
+    }
+
+    .gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+    }
+
+    body>main>section.gallery>article p {
+        margin: 20px;
+
+
+    }
+
+    body>main>section.gallery>article img {
+        width: 100%;
+    }
+
+    body>main>section.gallery>article>div {
+        margin-bottom: 10px;
+        position: relative;
+        justify-content: center;
+
+    }
+
+
+    a {
+        position: absolute;
+        left: -20px;
+        margin: -20px;
+    }
+
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    .blog-title h4,
+    .blog-title h4 span {
+        font-size: 20px;
+        /* Smaller font size for the title */
+    }
+
+    .blog-title a {
+        font-size: 16px;
+        /* Smaller font size for the link */
+    }
+
+    #about-blog h3 {
+        font-size: 18px;
+        /* Smaller font size for the article title */
+    }
+
+    #about-blog p {
+        font-size: 14px;
+        /* Smaller font size for the paragraph */
+    }
+
+    #about-blog button {
+        font-size: 14px;
+        /* Smaller font size for the button */
+        padding: 10px 20px;
+        /* Adjust padding for the button */
+    }
+
+    .blog article img {
+        width: 100%;
+        /* Make the image responsive */
+        height: auto;
+        /* Maintain aspect ratio */
+    }
+
+    .blog article {
+        display: flex;
+        flex-direction: column;
+        /* Stack the elements vertically */
+    }
+
+    body>main>section.blog>div>a {
+        display: none;
+    }
+
+    body>main>section.blog>div>h4>span {
+        display: none;
+    }
+
+    body>main>section.blog>article>img {
+        display: none;
+    }
+
+    body>main>section.magazine>div>a {
+        display: none;
+    }
+
+    body>main>section.blog>div>h4 {
+        font-size: 36px;
+    }
+
+    body>main>section.magazine>div>h4 {
+        font-size: 26px;
+    }
+
+    body>main>section.magazine>article>div>img {
+        width: 430px;
+        height: 30vh;
+        margin-left: -100px;
+        padding-bottom: 20px;
+
+    }
+
+    #magazine-img {
+        width: 80% !important;
+        height: 20%;
+        margin-left: 80px;
+
+    }
+
+
+
+    body>main>section.magazine>article>div>p {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        font-size: 16px;
+
+    }
+
+    .magazine-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-left: 90px !important;
+    }
+
+    body>main>section.magazine>article>div>p {
+        margin-left: -90px;
+    }
+
+    body>main>section.magazine>article>div>h3 {
+        margin-left: -90px;
+    }
+
+    body>main>section.magazine>article>div>button {
+        margin-left: -90px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .icons a {
+
+        position: unset !important;
+        display: block !important;
+        margin: 5px 0;
+    }
+}
