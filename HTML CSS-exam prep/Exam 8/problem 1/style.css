@@ -1,0 +1,107 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 50px;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    border: 1px solid rgb(9, 4, 77);
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.image-section img {
+    width: 90%;
+    height: 94vh;
+    object-fit: cover;
+    
+}
+
+.form-section {
+    width: 50%;
+    padding-left: 20px;
+    height: 100%;
+
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.button {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    margin-right: 5px;
+
+}
+
+.green {
+    background-color: green;
+    border: 1px solid rgb(9, 4, 77);
+}
+
+.grey {
+    background-color: grey;
+}
+
+.blue {
+    background-color: blue;
+    display: flex;
+    width: 80%;
+    text-align: center;
+    margin: 20px auto;
+}
+
+input[type="text"],
+select {
+    width: 49%;
+    padding: 10px;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+h5 {
+    margin: 20px 0 10px;
+}
+
+
+.weight-input {
+    display: flex;
+    margin: auto;
+    width: 80%;
+}
+
+.image-section {
+    width: 50%;
+    height: auto;
+}
+
+.button .blue {
+    width: 80%;
+    text-align: center;
+    position: relative;
+
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
