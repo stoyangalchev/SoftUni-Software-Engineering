@@ -1,0 +1,104 @@
+@import url('https: //fonts.google.com/specimen/Poppins');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+}
+
+.divove {
+    display: flex;
+    flex-direction: column;
+    
+    width: 30.92%;
+
+
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.divove img {
+    width: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    height: 100%;
+}
+
+.textbutton {
+    text-align: left;
+    justify-content: left;
+    align-items: start;
+    align-items: flex-start;
+    background-color: rgb(129, 154, 176);
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    height: auto;
+    margin-top: -8px;
+
+}
+
+.divove div {
+    text-align: center;
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+}
+
+h1 {
+    text-align: center;
+}
+
+.paragraph {
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.text1 {
+    text-align: left;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.divove button {
+    display: flex;
+    width: 27%;
+    border-radius: 20px;
+    justify-content: center;
+    border: none;
+    background-color: royalblue;
+    color: white;
+    font-size: 18px;
+    padding: 8px;
+    box-shadow: 0px 0px 4px white;
+    margin-left: 15px;
+
+}
+
+.longtext {
+    text-align: left;
+    padding: 15px;
+    font-size: 12px;
+
+
+}
+
+span {
+    font-weight: 700;
+    color: rgb(24, 108, 242);
+}
