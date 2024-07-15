@@ -1,0 +1,395 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    line-height: 1.15;
+
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+
+    color: #333;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+
+}
+
+.lefter {
+    text-align: left;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.navbar a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.right-nav {
+    display: flex;
+
+}
+
+.container {
+    display: flex;
+    background-color: rgb(117, 211, 255);
+
+
+}
+
+.left-side {
+    flex: 60%;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding-top: 40px;
+}
+
+.left-side h1 {
+
+    margin: 30px;
+    width: 70%;
+    margin-left: 20%;
+
+
+}
+
+.left-side p {
+
+    font-size: 17px;
+    margin: 20px;
+    width: 70%;
+    margin-left: 20%;
+
+
+}
+
+
+.right-side {
+    flex: 40%;
+
+}
+
+
+
+
+.right-side img {
+    width: 90%;
+    height: 400px;
+
+}
+
+.btn {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.join-now {
+    background-color: rgb(0, 0, 0);
+    color: rgb(254, 254, 254);
+    border-top: 1px solid rgb(0, 0, 0);
+    border-left: none;
+    border-right: none;
+    padding: 10px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+.donate-now {
+
+    background-color: white;
+    color: black;
+    border-top: 1px solid rgb(0, 0, 0);
+    border-left: none;
+    border-right: none;
+    padding: 10px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.fonts3item {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(249, 249, 249);
+}
+
+.item {
+    flex: 1;
+    text-align: center;
+    height: 70vh;
+
+}
+
+.fas.fa-home {
+    color: rgb(117, 211, 255);
+    font-size: 190px;
+    margin-top: 166px;
+}
+
+.fas.fa-helicopter {
+    color: rgb(117, 211, 255);
+    font-size: 170px;
+    margin-top: 59px;
+}
+
+.fas.fa-pencil-alt {
+    color: rgb(117, 211, 255);
+    font-size: 170px;
+    margin-top: 190px;
+
+}
+
+.item h1 {
+    margin-top: 60px;
+    font-size: 30px;
+}
+
+.item p {
+    margin-top: 20px;
+    font-size: 20px;
+    width: 70%;
+    margin-left: 18%;
+}
+
+.item h2 {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+
+.blueContainer {
+    margin-top: 100px;
+    padding-top: 50px;
+    background-color: rgb(117, 211, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.paragraphs {
+    padding-top: 50px;
+    display: flex;
+    gap: 300px;
+    width: 100%;
+    justify-content: center;
+    text-align: start;
+    line-height: 3.9;
+    margin-left: 200px;
+}
+
+.mission-button {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 20px;
+    margin: 20px;
+    border-radius: 4px;
+}
+
+.fas.fa-circle.fa-2x {
+    color: black;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.imgContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.text1 {
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.text2 {
+    margin-top: 30px;
+    margin-left: 20px;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.img-div {
+    flex-basis: 24%;
+    margin-bottom: 20px;
+}
+
+.img-div img {
+    width: 80%;
+    height: auto;
+    margin-top: 50px;
+}
+
+.container1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 9px;
+
+}
+
+.column {
+    height: 20vh;
+    width: 100%;
+    margin-bottom: 30px;
+    border-left: 0.11px solid black;
+    border-bottom: 0.1px solid black;
+    border-radius: 9px;
+
+}
+
+.top,
+.bottom {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    padding-left: 40px;
+    padding-top: 20px;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+}
+
+.top {
+    height: 40%;
+    width: 100%;
+    background-color: rgb(117, 211, 255);
+    /* Light grey background for visibility */
+}
+
+.bottom {
+    height: 60%;
+    width: 100%;
+
+    /* Slightly darker grey for contrast */
+}
+
+.half-screen {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.left {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.right {
+    width: 50%;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    flex-direction: column;
+    padding: 40px;
+    padding-top: 220px;
+    line-height: 1.8;
+}
+
+
+.left img {
+    width: 100%;
+    /* Adjust based on your preference */
+    height: auto;
+    /* Adjust based on your preference */
+}
+
+.right {
+    text-align: left;
+}
+
+input[type="email"] {
+    margin: 20px 0;
+    width: 20%;
+    border-radius: 2px;
+    padding: 5px;
+    border: 0.1px solid black;
+    color: rgba(0, 0, 0, 0.1);
+    opacity: 0.;
+
+
+}
+
+button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-top: -50px;
+ 
+}
+
+.social-icons a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.social-icons a:hover {
+    opacity: 0.7;
+}
+
+.social-icons i {
+    font-size: 24px;
+}
