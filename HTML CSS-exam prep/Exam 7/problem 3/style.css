@@ -1,0 +1,363 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fefcfc;
+    padding: 10px 20px;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.navigation a {
+    color: rgb(26, 3, 3);
+    text-decoration: none;
+    margin-left: 20px;
+    font-family: 'Lato', sans-serif;
+}
+
+.navigation a:hover {
+    color: #030101;
+}
+
+.navbar-background {
+
+    height: 50vh;
+    background-color: rgb(101, 92, 109);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+
+.taksi {
+    font-size: 40px;
+    margin-top: -200px;
+}
+
+.header-section {
+    display: flex;
+    justify-content: center;
+
+}
+
+.square-box {
+    width: calc(33.33% - 90px);
+    /* Adjust width to fit 3 boxes in a row with space for margin */
+    height: 400px;
+    /* Adjust size as needed */
+
+    /* Example background color */
+    margin: 0 10px;
+
+    margin-top: -200px;
+
+    /* Apply uniform margin to all sides */
+}
+
+/* Adjust the first and last box margin for alignment */
+.header-section .square-box:first-child {
+    margin-left: 25px;
+}
+
+.header-section .square-box:last-child {
+    margin-right: 25px;
+}
+
+.square-box {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+
+}
+
+.column-70,
+.column-30 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.column-70 {
+    width: 100%;
+    height: 70%;
+    background-color: #f4f4f4;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.column-30 {
+    width: 100%;
+    background-image: linear-gradient(to right, rgb(5, 160, 67), rgb(57, 194, 112));
+    height: 30%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.column-70 h1 {
+    margin-top: -10px;
+}
+
+.column-70 p {
+    margin-top: 10px;
+}
+
+.column-70 a {
+    display: block;
+    margin-top: 40px;
+    width: 40%;
+    margin-left: auto;
+    /* Auto margins center block elements */
+    margin-right: auto;
+    background-color: rgb(134, 67, 185)
+}
+
+.column-302 {
+    width: 100%;
+    background-image: linear-gradient(to right, rgb(72, 40, 162), rgb(95, 69, 226));
+    height: 30%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+.column-302 {
+    display: flex;
+    position: relative;
+}
+
+.leftcol::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    bottom: 10px;
+    width: 1px;
+    background-color: #c2bbbb;
+    transform: translateX(-50%);
+}
+
+.leftcol,
+.rightcol {
+    width: 50%;
+    display: flex;
+    line-height: 1.4;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.column-301 {
+    width: 100%;
+    background-image: linear-gradient(to right, rgb(38, 60, 152), rgb(66, 93, 246));
+    height: 30%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+.column-301 {
+    display: flex;
+    position: relative;
+}
+
+.tablecontainer {
+    display: flex;
+    flex-direction: column;
+
+
+    height: 90vh;
+    margin-top: 150px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: -150px;
+
+}
+
+.prisustveno {
+    margin-bottom: 20px;
+}
+
+.prisustveno p {
+
+    font-size: 20px;
+    margin-top: 10px;
+    width: 100%;
+
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 5px;
+}
+
+.table table {
+    width: 100%;
+    border-radius: 5px;
+    /* Ensure the table spans the full width of its container */
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.table tr td:nth-child(2) {
+    text-align: right;
+    width: 30%;
+    /* Align the content of the third td to the right */
+}
+
+.table td {
+    padding: 8px;
+
+
+
+}
+
+.icontick {
+    font-size: 24px;
+    padding: 0 5px;
+    color: rgb(18, 189, 18);
+    margin-right: 200px;
+}
+
+
+.iconcross {
+    font-size: 24px;
+    padding: 0 5px;
+    color: red;
+    margin-right: 100px;
+
+}
+
+.icontick1 {
+    font-size: 24px;
+    padding: 0 5px;
+    color: rgb(18, 189, 18);
+    margin-right: 100px;
+}
+
+
+.edno {
+    background-color: rgb(114, 108, 109);
+    border-radius: 5px;
+}
+
+.dve {
+    background-color: rgb(185, 183, 183);
+    border-radius: 5px;
+}
+
+body>div.tablecontainer>div.table>table>tbody>tr:nth-child(1)>td.text123 {
+
+    border-top-left-radius: 5px;
+}
+
+body>div.tablecontainer>div.table>table>tbody>tr:nth-child(1)>td:nth-child(2) {
+
+    border-top-right-radius: 5px;
+}
+
+body>div.tablecontainer>div.table>table>tbody>tr:nth-child(6)>td.text123 {
+
+    border-bottom-left-radius: 5px;
+}
+
+body>div.tablecontainer>div.table>table>tbody>tr:nth-child(6)>td:nth-child(2) {
+
+    border-bottom-right-radius: 5px;
+}
+
+.post {
+    margin: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-side,
+.right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.left-side {
+    width: 70%;
+    font-size: 26px;
+    line-height: 1.4;
+}
+
+.left-side p {
+    margin-top: 10px;
+    width: 100%;
+    /* Ensure the paragraph spans the full width of its container */
+}
+
+.right-side {
+    width: 30%;
+    align-items: center;
+    /* Center the logo image if desired */
+}
+
+.right-side img {
+    margin-top: 150px;
+    max-width: 100%;
+    /* Ensure the image does not overflow its container */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+footer {
+    background-color: rgb(104, 98, 136);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
