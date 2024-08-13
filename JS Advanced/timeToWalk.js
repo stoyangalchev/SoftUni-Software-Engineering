@@ -24,7 +24,7 @@ function timeToWalk(stepsCount, footprintMetres, studentSpeed) {
   console.log(`${hr}:${min}:${seconds}`);
 }
 timeToWalk(4000, 0.6, 5);
-console.log("-----------------");
+console.log("------------------");
 timeToWalk(2564, 0.7, 5.5);
 console.log("-----------------");
 timeToWalk(2564898765, 0.7, 7.5);
