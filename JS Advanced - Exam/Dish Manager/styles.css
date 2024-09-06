@@ -18,7 +18,7 @@ body {
   margin-bottom: 15px;
 }
 .form-wrapper h1 {
-  background: #2a88ad;
+  background: #6fd0f6;
   padding: 20px 30px 15px 30px;
   margin: -30px -30px 30px -30px;
   border-radius: 10px 10px 0 0;
@@ -87,7 +87,7 @@ body {
   margin-bottom: 5px;
 }
 .form-wrapper .section span {
-  background: #2a88ad;
+  background: #65bbdd;
   padding: 5px 10px 5px 10px;
   position: absolute;
   border-radius: 50%;
@@ -100,7 +100,7 @@ body {
 }
 .form-wrapper input[type="button"],
 .form-wrapper input[type="submit"] {
-  background: #2a88ad;
+  background: #61c5ed;
   padding: 8px 20px 8px 20px;
   border-radius: 5px;
   color: #fff;
@@ -112,7 +112,7 @@ body {
 }
 .form-wrapper input[type="button"]:hover,
 .form-wrapper input[type="submit"]:hover {
-  background: #2a6881;
+  background: #64caf3;
   box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
 }
 .form-wrapper .privacy-policy {
@@ -147,7 +147,7 @@ body {
 }
 
 #in-progress h3 {
-  background: #2a88ad;
+  background: #58b2d6;
   padding: 20px 10px 15px 10px;
   border-radius: 10px 10px 0 0;
   color: #fff;
@@ -160,7 +160,7 @@ body {
 .edit-btn,
 .complete-btn,
 #clear-btn {
-  background: #2a88ad;
+  background: #5db9de;
   padding: 4px 13px 4px 13px;
   border-radius: 5px;
   color: #fff;
@@ -175,7 +175,7 @@ body {
 
 .edit-btn:hover,
 .complete-btn:hover {
-  background: #2a6881;
+  background: #5bd1ff;
   box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
 }
 
@@ -192,7 +192,7 @@ body {
 
 .each-line h4 {
   margin: 10px 0 10px 0;
-  color: #2a88ad;
+  color: #40b5e3;
   font: normal 15px "Bitter", serif;
 }
 
@@ -216,7 +216,7 @@ h3 {
 }
 
 #finished-wrapper h3 {
-  background: #2a88ad;
+  background: #80c9e6;
   padding: 20px 10px 15px 10px;
   border-radius: 10px 10px 0 0;
   color: #fff;
