@@ -17,7 +17,7 @@
 
                 {{#if owner.publications}}
                 <!--If the user has created their own publications, separate their titles with a comma and a space (, )-->
-                <h4>Titles of which the user is the author: {{#each creatures}} {{this.title}} {{/each}}</h4>
+                <h4>Titles of which the user is the author: <span class="spanche">{{#each creatures}} {{this.title}} {{/each}}</span></h4>
                 {{else}}
                 <!--If not display:-->
                 <h4>Titles of which the user is the author: Not yet.</h4>

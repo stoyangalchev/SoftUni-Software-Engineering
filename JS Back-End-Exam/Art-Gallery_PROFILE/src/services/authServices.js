@@ -1,6 +1,7 @@
 const jwt = require("../utils/jwt");
 const User = require("../models/User");
-const { JWT_Secret } = require("../constants");
+require("dotenv").config();
+const JWT_Secret = process.env.JWT_SECRET;
 const { log } = require("util");
 const bcrypt = require("bcrypt");
 
