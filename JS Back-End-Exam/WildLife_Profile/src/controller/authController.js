@@ -1,11 +1,13 @@
 const router = require("express").Router();
 const authServices = require("../services/authServices");
 const { isGuest, isAuth } = require("../middleware/authMiddleware");
-const { AUTH_COOKIE_NAME } = require("../constants");
+require("dotenv").config();
 const { MongooseError } = require("mongoose");
 const { ValidationError } = require("mongoose").Error;
 const { ValidatorError } = require("mongoose").Error;
 const MongoServerError = require("mongodb").MongoServerError;
+const  AUTH_COOKIE_NAME  = process.env.AUTH_COOKIE_NAME
+
 router.get("/login", isGuest, (req, res) => {
   res.render("auth/login");
 });
@@ -91,7 +93,16 @@ function getErrorMessage(error) {
 
 router.get("/logout", isAuth, (req, res) => {
   res.clearCookie(AUTH_COOKIE_NAME);
-  res.redirect("/");
+  if (req.session) {
+    req.session.destroy((err) => {
+      if (err) {
+        return res.redirect("/");
+      }
+      res.redirect("/auth/login");
+    });
+  } else {
+    res.redirect("/auth/login");
+  }
 });
 
 module.exports = router;
