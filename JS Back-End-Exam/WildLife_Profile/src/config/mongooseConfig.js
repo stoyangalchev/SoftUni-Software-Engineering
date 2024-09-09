@@ -1,9 +1,11 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-const { DB_Connection_String } = require('../constants');
+require("dotenv").config();
+
+const DB_Connection_String = process.env.DB_CONNECTION_STRING;
 
 function initDatabase() {
-    return mongoose.connect(DB_Connection_String);
+  return mongoose.connect(DB_Connection_String);
 }
 
 module.exports = initDatabase;
