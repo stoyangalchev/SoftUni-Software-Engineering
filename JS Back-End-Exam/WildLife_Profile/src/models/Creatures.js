@@ -32,7 +32,7 @@ let creaturesSchema = new mongoose.Schema({
     type: String,
     required: [true, "Description is required!"],
     minLength: 5,
-    maxLength: 50,
+   
   },
   ratingofpost: {
     type: Number,

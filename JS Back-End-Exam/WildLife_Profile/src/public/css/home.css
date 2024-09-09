@@ -23,6 +23,7 @@
     font-size: 3.7rem;
     font-weight: 600;
     line-height: 1.1;
+
     color: #ffffff !important;
     font-family: Ubuntu, sans-serif !important;
     pointer-events: auto;
@@ -31,6 +32,11 @@
     font-weight: bold;
     word-wrap: break-word;
     padding-left: 1em;
+    text-shadow:
+            -2px -2px 0 #000,
+            2px -2px 0 #000,
+            -2px 2px 0 #000,
+            2px 2px 0 #000;
 }
 
 .short-info>h2 {
@@ -46,6 +52,11 @@
     font-weight: bold;
     word-wrap: break-word;
     padding-left: 1em;
+    text-shadow:
+            -2px -2px 0 #000,
+            2px -2px 0 #000,
+            -2px 2px 0 #000,
+            2px 2px 0 #000;
 }
 
 #home-page {

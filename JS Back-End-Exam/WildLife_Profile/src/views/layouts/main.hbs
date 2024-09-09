@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <title>Home Page</title>
 
-    <!-- Do not forget to change the path to the css file -->
+
     <link href="/static/css/style.css" type="text/css" rel="stylesheet">
+    <link rel="icon" href="/static/img/logo.png" type="image/png">
 </head>
 
 <body>
@@ -14,8 +15,7 @@
 
     <div id="box">
 
-        <!-- In case of error, you should display div with class "error-container" -->
-        <!-- You can choose to display the first error or all of them (error message/s in your opinion) -->
+
         {{#if error}}
         <div class="error-container">
             <p>{{error}}</p>
@@ -25,7 +25,7 @@
 
 
         <nav>
-            <!-- Do not forget to change the path to the image -->
+
             <img src="/static/img/logo.png" alt="logo">
 
             <ul class="menu">
@@ -34,7 +34,10 @@
                 {{#if user}}
                 <!-- Logged users -->
                 <li><a href="/creatures/create">Create Post</a></li>
-                <li><a href="/profile">Posts of {{this.email}}</a></li>
+                <li>
+                    <a href="/profile">Posts Of <span
+                            style="color: aqua; font-size:30px">{{this.user.firstname}}</span></a>
+                </li>
                 <li><a href="/auth/logout">Logout</a></li>
                 {{else}}
                 <!-- Guest users -->
@@ -48,7 +51,7 @@
 
 
         <footer>
-            © Js Back-End Exam 2021
+            © Js Back-End app Stoyan Galchev
         </footer>
     </div>
 

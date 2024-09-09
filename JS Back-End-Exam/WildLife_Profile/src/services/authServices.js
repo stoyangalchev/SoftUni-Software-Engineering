@@ -1,13 +1,15 @@
 const jwt = require("../utils/jwt");
 const User = require("../models/User");
-const { JWT_Secret } = require("../constants");
-
+require("dotenv").config();
+const JWT_SECRET = process.env.JWT_SECRET;
 exports.register = (userData) => User.create(userData);
+
+exports.findUserByID = (userId) => User.findById(userId).lean();
 
 exports.login = async ({ email, password }) => {
   let user = await User.findOne({ email });
 
-  console.log(user);
+
 
   if (!user) {
     throw new Error("Invalid Email or Password ");
@@ -24,10 +26,9 @@ exports.login = async ({ email, password }) => {
     firstname: user.firstname,
     lastname: user.lastname,
     email: user.email,
-
   };
 
-  let token = await jwt.sign(payload, JWT_Secret);
+  let token = await jwt.sign(payload, JWT_SECRET);
 
   return token;
 };

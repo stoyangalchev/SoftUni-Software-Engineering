@@ -1,18 +1,19 @@
 const jwt = require("../utils/jwt");
 
-const { AUTH_COOKIE_NAME, JWT_Secret } = require("../constants");
-
+require("dotenv").config();
+const AUTH_COOKIE_NAME = process.env.AUTH_COOKIE_NAME;
+const JWT_SECRET = process.env.JWT_SECRET;
 exports.auth = function (req, res, next) {
   let token = req.cookies[AUTH_COOKIE_NAME];
 
   if (token) {
     jwt
-      .verify(token, JWT_Secret)
+      .verify(token, JWT_SECRET)
       .then((decodedToken) => {
         req.user = decodedToken;
         res.locals.user = decodedToken;
         res.locals.isAuthenticated = true;
-     
+
         next();
       })
       .catch((err) => {
